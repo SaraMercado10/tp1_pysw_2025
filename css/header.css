@@ -1,4 +1,5 @@
 /* Variables CSS */
+/*Variables para una paleta de colores*/
 :root {
     --naranja: #ff7f11;
     --blanco: #ffffff;
@@ -6,7 +7,7 @@
     --fondo-transparente: rgba(255, 255, 255, 0.05);
   }
   
-  /* Reset básico */
+ /* Reset básico: Elimina márgenes y rellenos predeterminados, y configura el modelo de caja para mayor consistencia */
   * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +18,7 @@
     font-family: 'Arial', sans-serif;
   }
   
-  /* Header */
+/* Header principal con fondo negro y posicionado arriba del todo */
   .header {
     position: absolute;
     width: 100%;
@@ -27,6 +28,7 @@
     background-color: black;
   }
   
+  /* Contenedor del header, usa flexbox para distribuir los elementos */
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,6 +38,7 @@
     position: relative;
   }
   
+  /* Columna del logo alineada a la izquierda */
   .logo {
     flex: 1;
     display: flex;
@@ -47,6 +50,7 @@
     height: 50px;
   }
   
+  /* Botón hamburguesa oculto por defecto (visible en móvil) */
   .nav-toggle {
     display: none;
     flex-direction: column;
@@ -61,6 +65,7 @@
     transition: 0.4s;
   }
   
+  /* Enlaces de navegación centrados */
   .nav-links {
     flex: 2;
     display: flex;
@@ -88,6 +93,7 @@
     text-decoration: underline;
   }
   
+  /* Dropdown para mostrar subenlaces al pasar el mouse */
   .dropdown {
     position: relative;
   }
@@ -110,11 +116,16 @@
     color: var(--blanco);
     display: block;
   }
+
+  .dropdown-menu a:hover{
+    color: var(--negro)
+  }
   
   .dropdown:hover .dropdown-menu {
     display: flex;
   }
   
+  /* Iconos de redes sociales a la derecha */
   .social-icons {
     flex: 1;
     display: flex;
@@ -134,6 +145,7 @@
   }
   
   /* Responsive */
+  /* Estilos para resoluciones menores a 768px */
   @media (max-width: 768px) {
     .nav-toggle {
       display: flex;
@@ -141,7 +153,8 @@
       right: 2rem;
       top: 1.5rem;
     }
-  
+
+  /* Ajustes de distribución para columna */
     .navbar {
       flex-direction: column;
       align-items: center;
@@ -165,6 +178,7 @@
       gap: 1rem;
     }
   
+    /* Mostrar menú de navegación si navbar tiene clase "active" */
     .navbar.active .nav-links {
       display: flex;
     }
@@ -175,6 +189,7 @@
       box-shadow: none;
     }
   
+    /* Desactivar hover y usar focus/active en móvil */
     .dropdown:hover .dropdown-menu {
       display: none;
     }
