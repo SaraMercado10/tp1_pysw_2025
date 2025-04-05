@@ -20,7 +20,6 @@
   
 /* Header principal con fondo negro y posicionado arriba del todo */
   .header {
-    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
