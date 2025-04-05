@@ -7,13 +7,14 @@
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/index.css" />
 </head>
 <body>
   <!-- Header con mega menú -->
   <header class="header">
     <nav class="navbar" id="navbar">
       <div class="nav-col logo">
-        <a href="#"><img src="https://www.gymtop.com.ar/img/logo.png" alt="Logo"></a>
+        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
       </div>
 
       <div class="nav-toggle" id="nav-toggle">
@@ -46,11 +47,27 @@
     </nav>
   </header>
   <h1>TITULO</h1>
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <h2>Suscríbete a nuestro Newsletter</h2>
+    <form action="#" method="POST">
+      <input type="email" name="email" placeholder="Ingresa tu email" required />
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+  <!--Mapa-->
+  <div class="map-section">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0192532503344!2d-122.42067908468108!3d37.778519979758225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f87f31b%3A0xdbcbe4a08728f376!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615910929467!5m2!1sen!2sus"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>  
   <footer>
     <div class="footer-top">
       <div class="footer-col left">
         <div class="footer-logo">
-          <img src="https://www.gymtop.com.ar/img/logo.png" alt="Logo del gimnasio">
+          <img src="./images/logo.png" alt="Logo del gimnasio">
         </div>
         <div class="footer-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
