@@ -4,6 +4,57 @@
     --negro: #000000;
     --fondo-transparente: rgba(255, 255, 255, 0.05);
   }
+
+  .testimonios-section {
+    padding: 2rem 1rem;
+    background-color: #000;
+    text-align: center;
+    color: white;
+  }
+
+  .testimonios-carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .testimonios-carousel {
+    display: flex;
+    width: 500%;
+    animation: carousel 25s linear infinite;
+  }
+
+  .testimonios-section:hover .testimonios-carousel {
+    animation-play-state: paused;
+  }
+
+  .testimonio {
+    flex: 0 0 20%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .testimonio img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  @keyframes carousel {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-20%); }
+    45% { transform: translateX(-20%); }
+    50% { transform: translateX(-40%); }
+    70% { transform: translateX(-40%); }
+    75% { transform: translateX(-60%); }
+    95% { transform: translateX(-60%); }
+    100% { transform: translateX(-80%); }
+  }
+  
 /* Sección del formulario de newsletter */
 .newsletter-section {
     background-color: var(--naranja);
