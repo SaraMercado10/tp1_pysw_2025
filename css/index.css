@@ -5,6 +5,55 @@
     --fondo-transparente: rgba(255, 255, 255, 0.05);
   }
 
+  .clases-destacadas {
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .clases-destacadas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .clases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .clase-card {
+    background-color: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .clase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .clase-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .clase-card h3 {
+    margin: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .clase-card p {
+    margin: 0 1rem 1.5rem;
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
   /*Contador*/
   .contador-section {
     background-color: var(--naranja);
