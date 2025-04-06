@@ -5,6 +5,95 @@
     --fondo-transparente: rgba(255, 255, 255, 0.05);
   }
 
+  /**Video**/
+  .hero-section {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+  }
+  
+  .hero-text {
+    margin-bottom: 2rem;
+    animation: fadeSlideIn 1.2s ease-out both;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: slideInDown 1s ease-out both;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    color: #ccc;
+    animation: fadeInText 2s ease-out both;
+    animation-delay: 0.3s;
+  }
+  
+  .hero-video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-video-container iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  /* Animaciones */
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-text p {
+      font-size: 1rem;
+    }
+  
+    .hero-video-container iframe {
+      height: 250px;
+    }
+  }
+  
+  
+  /*Cards Clases*/
   .clases-destacadas {
     background-color: #000;
     color: #fff;
@@ -53,7 +142,7 @@
     font-size: 1rem;
     color: #ccc;
   }
-  
+
   /*Contador*/
   .contador-section {
     background-color: var(--naranja);
