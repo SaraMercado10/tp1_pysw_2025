@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--Prueba-->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +7,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/formulario.css" />
 </head>
 <body>
     <!-- Header con mega menú -->
@@ -46,6 +46,44 @@
       </div>
     </nav>
   </header>
+  <!-- Sección de Formulario -->
+  <section class="contact-section">
+    <h2>Contáctanos</h2>
+    <form id="contact-form" class="contact-form">
+        <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+        <button type="submit" id="submit-btn">
+            Enviar <i class="fas fa-paper-plane"></i>
+        </button>
+
+        <!-- Spinner de carga -->
+        <div class="spinner-container" id="spinner-container">
+            <div class="spinner"></div>
+        </div>
+    </form>
+
+    <!-- Modal de confirmación -->
+    <div class="modal" id="confirmation-modal">
+        <div class="modal-content">
+            <h3>Mensaje enviado</h3>
+            <p>Tu mensaje ha sido enviado correctamente. ¡Nos pondremos en contacto pronto!</p>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+</section>
   <footer>
     <div class="footer-top">
       <div class="footer-col left">
@@ -79,5 +117,6 @@
     </div>
   </footer>  
   <script src="./script/script.js"></script>
+  <script src="./script/formuario.js"></script>
 </body>
 </html>
