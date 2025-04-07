@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/clases.css" />
 </head>
 <body>
     <!-- Header con mega menú -->
@@ -45,6 +46,124 @@
       </div>
     </nav>
   </header>
+  <!-- Contenedor Principal para Filtros -->
+  <div class="filtro-container">
+    <!-- Filtros -->
+    <section class="filtros-section">
+      <div class="filtros-container">
+        <input type="radio" id="todas" name="filtro" checked>
+        <label for="todas">Todas</label>
+        
+        <input type="radio" id="musculacion" name="filtro">
+        <label for="musculacion">Musculación</label>
+        
+        <input type="radio" id="crossfit" name="filtro">
+        <label for="crossfit">CrossFit</label>
+        
+        <input type="radio" id="yoga" name="filtro">
+        <label for="yoga">Yoga</label>
+        
+        <input type="radio" id="spinning" name="filtro">
+        <label for="spinning">Spinning</label>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="galeria-section">
+      <div class="grid-masonry">
+        <!-- Card 1 -->
+        <article class="clase-card musculacion">
+          <div class="clase-img-container">
+            <img src="./images/clases/musculacion.jpg" alt="Musculación">
+            <div class="clase-overlay">
+              <h3>Musculación</h3>
+              <p>Desarrolla fuerza muscular</p>
+            </div>
+          </div>
+          <div class="clase-info">
+            <p><i class="fas fa-clock"></i> Lunes-Viernes 7:00-22:00</p>
+            <p><i class="fas fa-user-tie"></i> Prof. Carlos</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="clase-card crossfit">
+          <div class="clase-img-container">
+            <img src="./images/clases/crossfit.jpg" alt="CrossFit">
+            <div class="clase-overlay">
+              <h3>CrossFit</h3>
+              <p>Alta intensidad</p>
+            </div>
+          </div>
+          <div class="clase-info">
+            <p><i class="fas fa-clock"></i> Lunes-Sábado 6:00-21:00</p>
+            <p><i class="fas fa-user-tie"></i> Prof. Ana</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="clase-card yoga">
+          <div class="clase-img-container">
+            <img src="./images/clases/yoga.jpg" alt="Yoga">
+            <div class="clase-overlay">
+              <h3>Yoga</h3>
+              <p>Armoniza cuerpo y mente</p>
+            </div>
+          </div>
+          <div class="clase-info">
+            <p><i class="fas fa-clock"></i> Martes-Jueves 8:00-20:00</p>
+            <p><i class="fas fa-user-tie"></i> Prof. Sofía</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="clase-card spinning">
+          <div class="clase-img-container">
+            <img src="./images/clases/spinning.jpg" alt="Spinning">
+            <div class="clase-overlay">
+              <h3>Spinning</h3>
+              <p>Cardio intensivo</p>
+            </div>
+          </div>
+          <div class="clase-info">
+            <p><i class="fas fa-clock"></i> Lunes-Viernes 6:00-22:00</p>
+            <p><i class="fas fa-user-tie"></i> Prof. Marcos</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- Horarios -->
+  <section class="horarios-section">
+    <h2>Horarios Semanales</h2>
+    <div class="tabla-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Hora</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>07:00</td>
+            <td class="musculacion">Musculación</td>
+            <td class="yoga">Yoga</td>
+            <td class="crossfit">CrossFit</td>
+            <td class="yoga">Yoga</td>
+            <td class="spinning">Spinning</td>
+          </tr>
+          <!-- Más filas según horarios reales -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <footer>
     <div class="footer-top">
       <div class="footer-col left">
