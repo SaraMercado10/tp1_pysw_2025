@@ -144,6 +144,13 @@
   }
 
   /*Contador*/
+  @property --numero {
+    syntax: "<integer>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  /* ===== ESTILOS DEL CONTADOR ===== */
   .contador-section {
     background-color: var(--naranja);
     color: white;
@@ -151,21 +158,18 @@
     text-align: center;
   }
 
-  .contador-section h2 {
-    font-size: 2.5rem;
-    margin: 0;
-    animation: aparecerContador 1s ease-in-out;
+  .contador {
+    animation: contar 3s linear forwards;
+    counter-reset: num var(--numero);
   }
 
-  @keyframes aparecerContador {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  .contador::after {
+    content: counter(num);
+  }
+
+  @keyframes contar {
+    from { --numero: 0; }
+    to { --numero: 500; }
   }
   
   /**Testimonios**/
