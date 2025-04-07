@@ -11,191 +11,182 @@
 </head>
 <body>
     <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
-
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-item">Extras</a>
-            <div class="dropdown-menu">
-              <a href="formulario.html">Contacto</a>
-              <a href="precios.html">Precio</a>
-              <a href="blog.html">Blog</a>
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-col logo">
+                <a href="#"><img src="./images/logo.png" alt="Logo"></a>
             </div>
-          </li>
-        </ul>
-      </div>
 
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <!-- Contenedor Principal para Filtros -->
-  <div class="filtro-container">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-col nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="clases.html" class="nav-item">Clases</a></li>
+                    <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-item">Extras</a>
+                        <div class="dropdown-menu">
+                            <a href="formulario.html">Contacto</a>
+                            <a href="precios.html">Precio</a>
+                            <a href="blog.html">Blog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-col social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </header>
     <!-- Filtros -->
-    <section class="filtros-section">
-      <div class="filtros-container">
-        <input type="radio" id="todas" name="filtro" checked>
-        <label for="todas">Todas</label>
-        
-        <input type="radio" id="musculacion" name="filtro">
-        <label for="musculacion">Musculación</label>
-        
-        <input type="radio" id="crossfit" name="filtro">
-        <label for="crossfit">CrossFit</label>
-        
-        <input type="radio" id="yoga" name="filtro">
-        <label for="yoga">Yoga</label>
-        
-        <input type="radio" id="spinning" name="filtro">
-        <label for="spinning">Spinning</label>
-      </div>
-    </section>
+<section class="filtros-section">
+  <div class="filtros-container">
+    <input type="radio" id="todas" name="filtro" checked>
+    <label for="todas">Todas</label>
 
-    <!-- Galería -->
-    <section class="galeria-section">
-      <div class="grid-masonry">
-        <!-- Card 1 -->
-        <article class="clase-card musculacion">
-          <div class="clase-img-container">
-            <img src="./images/clases/musculacion.jpg" alt="Musculación">
-            <div class="clase-overlay">
-              <h3>Musculación</h3>
-              <p>Desarrolla fuerza muscular</p>
-            </div>
-          </div>
-          <div class="clase-info">
-            <p><i class="fas fa-clock"></i> Lunes-Viernes 7:00-22:00</p>
-            <p><i class="fas fa-user-tie"></i> Prof. Carlos</p>
-          </div>
-        </article>
+    <input type="radio" id="musculacion" name="filtro">
+    <label for="musculacion">Musculación</label>
 
-        <!-- Card 2 -->
-        <article class="clase-card crossfit">
-          <div class="clase-img-container">
-            <img src="./images/clases/crossfit.jpg" alt="CrossFit">
-            <div class="clase-overlay">
-              <h3>CrossFit</h3>
-              <p>Alta intensidad</p>
-            </div>
-          </div>
-          <div class="clase-info">
-            <p><i class="fas fa-clock"></i> Lunes-Sábado 6:00-21:00</p>
-            <p><i class="fas fa-user-tie"></i> Prof. Ana</p>
-          </div>
-        </article>
+    <input type="radio" id="crossfit" name="filtro">
+    <label for="crossfit">CrossFit</label>
 
-        <!-- Card 3 -->
-        <article class="clase-card yoga">
-          <div class="clase-img-container">
-            <img src="./images/clases/yoga.jpg" alt="Yoga">
-            <div class="clase-overlay">
-              <h3>Yoga</h3>
-              <p>Armoniza cuerpo y mente</p>
-            </div>
-          </div>
-          <div class="clase-info">
-            <p><i class="fas fa-clock"></i> Martes-Jueves 8:00-20:00</p>
-            <p><i class="fas fa-user-tie"></i> Prof. Sofía</p>
-          </div>
-        </article>
+    <input type="radio" id="yoga" name="filtro">
+    <label for="yoga">Yoga</label>
 
-        <!-- Card 4 -->
-        <article class="clase-card spinning">
-          <div class="clase-img-container">
-            <img src="./images/clases/spinning.jpg" alt="Spinning">
-            <div class="clase-overlay">
-              <h3>Spinning</h3>
-              <p>Cardio intensivo</p>
-            </div>
-          </div>
-          <div class="clase-info">
-            <p><i class="fas fa-clock"></i> Lunes-Viernes 6:00-22:00</p>
-            <p><i class="fas fa-user-tie"></i> Prof. Marcos</p>
-          </div>
-        </article>
-      </div>
-    </section>
+    <input type="radio" id="spinning" name="filtro">
+    <label for="spinning">Spinning</label>
   </div>
+</section>
 
-  <!-- Horarios -->
-  <section class="horarios-section">
-    <h2>Horarios Semanales</h2>
-    <div class="tabla-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Hora</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miércoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>07:00</td>
-            <td class="musculacion">Musculación</td>
-            <td class="yoga">Yoga</td>
-            <td class="crossfit">CrossFit</td>
-            <td class="yoga">Yoga</td>
-            <td class="spinning">Spinning</td>
-          </tr>
-          <!-- Más filas según horarios reales -->
-        </tbody>
-      </table>
+<!-- Contenedor principal -->
+<div class="contenedor-principal">
+  <!-- Tarjetas -->
+  <article class="clase-card musculacion">
+    <div class="clase-img-container">
+      <img src="./images/clases/musculacion.jpg" alt="Musculación">
+      <div class="clase-overlay">
+        <h3>Musculación</h3>
+        <p>Desarrolla fuerza muscular</p>
+      </div>
     </div>
-  </section>
+    <div class="clase-info">
+      <p><i class="fas fa-clock"></i> Lunes-Viernes 7:00-22:00</p>
+      <p><i class="fas fa-user-tie"></i> Prof. Carlos</p>
+    </div>
+  </article>
 
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
-        </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-      </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
+  <article class="clase-card crossfit">
+    <div class="clase-img-container">
+      <img src="./images/clases/crossfit.jpg" alt="CrossFit">
+      <div class="clase-overlay">
+        <h3>CrossFit</h3>
+        <p>Alta intensidad</p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
+    <div class="clase-info">
+      <p><i class="fas fa-clock"></i> Lunes-Sábado 6:00-21:00</p>
+      <p><i class="fas fa-user-tie"></i> Prof. Ana</p>
     </div>
-  </footer>  
-  <script src="./script/script.js"></script>
+  </article>
+
+  <article class="clase-card yoga">
+    <div class="clase-img-container">
+      <img src="./images/clases/yoga.jpg" alt="Yoga">
+      <div class="clase-overlay">
+        <h3>Yoga</h3>
+        <p>Armoniza cuerpo y mente</p>
+      </div>
+    </div>
+    <div class="clase-info">
+      <p><i class="fas fa-clock"></i> Martes-Jueves 8:00-20:00</p>
+      <p><i class="fas fa-user-tie"></i> Prof. Sofía</p>
+    </div>
+  </article>
+
+  <article class="clase-card spinning">
+    <div class="clase-img-container">
+      <img src="./images/clases/spinning.jpg" alt="Spinning">
+      <div class="clase-overlay">
+        <h3>Spinning</h3>
+        <p>Cardio intensivo</p>
+      </div>
+    </div>
+    <div class="clase-info">
+      <p><i class="fas fa-clock"></i> Lunes-Viernes 6:00-22:00</p>
+      <p><i class="fas fa-user-tie"></i> Prof. Marcos</p>
+    </div>
+  </article>
+</div>
+    <!-- Horarios -->
+    <section class="horarios-section">
+        <h2>Horarios Semanales</h2>
+        <div class="tabla-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:00</td>
+                        <td class="musculacion">Musculación</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="crossfit">CrossFit</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="spinning">Spinning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col left">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Logo del gimnasio">
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center">
+                <h4>Nuestro Producto</h4>
+                <ul>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Clases</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col right">
+                <h4>Contáctanos</h4>
+                <p>Email: contacto@gimnasio.com</p>
+                <p>Dirección: Calle Ficticia 123, Ciudad</p>
+                <p>Tel: +54 9 11 1234 5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
+        </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>

@@ -1,214 +1,242 @@
+/* Variables globales */
 :root {
-    --naranja: #ff7f11;
-    --blanco: #ffffff;
-    --negro: #000000;
-    --gris-oscuro: #222;
-    --gris-claro: #eee;
+  --naranja: #ff7f11;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --gris-oscuro: #222;
+  --gris-claro: #eee;
+}
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--gris-claro);
+  color: var(--negro);
+}
+
+/* ===== FILTROS ===== */
+.filtros-section {
+  background-color: var(--gris-oscuro);
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.filtros-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.filtros-container input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.filtros-container label {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--negro);
+  color: var(--blanco);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtros-container input[type="radio"]:checked + label {
+  background-color: var(--naranja);
+  color: var(--negro);
+  font-weight: bold;
+}
+
+/* ===== GALERÍA ===== */
+.contenedor-principal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.clase-card {
+  /*display: none;*/
+  width: calc(25% - 1.5rem); /* Ajustar ancho según diseño */
+  background: var(--negro);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Mostrar todas las tarjetas cuando "todas" está seleccionada */
+#todas:checked ~ .contenedor-principal .clase-card {
+  display: block;
+}
+
+/* Mostrar solo las tarjetas correspondientes a cada categoría */
+#musculacion:checked ~ .contenedor-principal .musculacion,
+#crossfit:checked ~ .contenedor-principal .crossfit,
+#yoga:checked ~ .contenedor-principal .yoga,
+#spinning:checked ~ .contenedor-principal .spinning {
+  display: block;
+}
+
+/* Estilos Cards */
+.clase-img-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.clase-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.clase-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--blanco);
+  padding: 1rem;
+  transition: bottom 0.3s;
+}
+
+.clase-card:hover .clase-overlay {
+  bottom: 0;
+}
+
+.clase-card:hover img {
+  transform: scale(1.1);
+}
+
+.clase-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.clase-info {
+  padding: 1rem;
+  color: var(--blanco);
+}
+
+.clase-info p {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ===== TABLA ===== */
+.horarios-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.horarios-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--negro);
+}
+
+.tabla-container {
+  overflow-x: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanco);
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--gris-claro);
+}
+
+th {
+  background-color: var(--naranja);
+  color: var(--negro);
+  position: sticky;
+  top: 0;
+}
+
+/* Colores por clase */
+.musculacion {
+  background-color: #ffd6c0;
+}
+.crossfit {
+  background-color: #c0ffd6;
+}
+.yoga {
+  background-color: #d6c0ff;
+}
+.spinning {
+  background-color: #c0d6ff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .clase-card {
+      width: calc(50% - 1rem);
   }
-  
-  /* ===== FILTROS ===== */
-  .filtro-container {
-    display: contents;
-  }
-  
-  .filtros-section {
-    background-color: var(--gris-oscuro);
-    padding: 1.5rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
+
   .filtros-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .filtros-container input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-  }
-  
-  .filtros-container label {
-    padding: 0.5rem 1.5rem;
-    background-color: var(--negro);
-    color: var(--blanco);
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .filtros-container input[type="radio"]:checked + label {
-    background-color: var(--naranja);
-    color: var(--negro);
-    font-weight: bold;
-  }
-  
-  /* ===== GALERÍA ===== */
-  .galeria-section {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .grid-masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-    align-items: start;
-  }
-  
-  /* Estado inicial: mostrar todas */
-  .clase-card {
-    display: block;
-    animation: fadeIn 0.5s ease-out;
-  }
-  
-  /* Filtrado */
-  #musculacion:checked ~ .galeria-section .clase-card:not(.musculacion),
-  #crossfit:checked ~ .galeria-section .clase-card:not(.crossfit),
-  #yoga:checked ~ .galeria-section .clase-card:not(.yoga),
-  #spinning:checked ~ .galeria-section .clase-card:not(.spinning) {
-    display: none;
-  }
-  
-  #todas:checked ~ .galeria-section .clase-card {
-    display: block;
-  }
-  
-  /* Estilos Cards */
-  .clase-card {
-    background: var(--negro);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .clase-img-container {
-    position: relative;
-    height: 250px;
-    overflow: hidden;
-  }
-  
-  .clase-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-  }
-  
-  .clase-overlay {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: var(--blanco);
-    padding: 1rem;
-    transition: bottom 0.3s;
-  }
-  
-  .clase-card:hover .clase-overlay {
-    bottom: 0;
-  }
-  
-  .clase-card:hover img {
-    transform: scale(1.1);
-  }
-  
-  .clase-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  }
-  
-  .clase-info {
-    padding: 1rem;
-    color: var(--blanco);
-  }
-  
-  .clase-info p {
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  /* ===== TABLA ===== */
-  .horarios-section {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  
-  .horarios-section h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--negro);
-  }
-  
-  .tabla-container {
-    overflow-x: auto;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--blanco);
-  }
-  
-  th, td {
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid var(--gris-claro);
-  }
-  
-  th {
-    background-color: var(--naranja);
-    color: var(--negro);
-    position: sticky;
-    top: 0;
-  }
-  
-  /* Colores por clase */
-  .musculacion { background-color: #ffd6c0; }
-  .crossfit { background-color: #c0ffd6; }
-  .yoga { background-color: #d6c0ff; }
-  .spinning { background-color: #c0d6ff; }
-  
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .grid-masonry {
-      grid-template-columns: 1fr;
-    }
-    
-    .filtros-container {
       flex-direction: column;
       align-items: stretch;
-    }
-    
-    .filtros-container label {
+  }
+
+  .filtros-container label {
       width: 100%;
       text-align: center;
-    }
-    
-    table {
+  }
+
+  table {
       font-size: 0.8rem;
-    }
-    
-    th, td {
+  }
+
+  th,
+  td {
       padding: 0.5rem;
-    }
   }
-  
-  /* Animaciones */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .clase-card {
+      width: 100%;
   }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

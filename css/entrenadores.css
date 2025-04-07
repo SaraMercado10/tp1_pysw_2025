@@ -1,0 +1,177 @@
+/* Variables globales */
+:root {
+    --naranja: #ff7f11;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris-oscuro: #222;
+    --gris-claro: #eee;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+}
+
+/* ===== SECCIÓN ENTRENADORES ===== */
+.entrenadores-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 2rem;
+}
+
+.entrenadores-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--naranja);
+}
+
+.grid-entrenadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.entrenador-card {
+    perspective: 1000px;
+    width: 100%;
+    height: auto; /* Altura automática */
+    position: relative;
+    min-height: 400px; /* Altura mínima para evitar recortes */
+}
+
+.entrenador-card .card-front,
+.entrenador-card .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 1rem; /* Padding interno para evitar recortes */
+}
+
+.entrenador-card .card-front {
+    transform: rotateY(0deg);
+}
+
+.entrenador-card .card-back {
+    transform: rotateY(180deg);
+}
+
+.entrenador-card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.entrenador-card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.entrenador-card img {
+    width: 120px; /* Tamaño base de la imagen */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.entrenador-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.entrenador-card p {
+    font-size: 1rem;
+    color: var(--gris-claro);
+}
+
+/* Habilidades */
+.skill {
+    margin: 1rem 0;
+    width: 100%; /* Ancho completo para móviles */
+}
+
+.skill-bar {
+    background-color: var(--gris-claro);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: var(--naranja);
+    transition: width 1s ease;
+}
+
+/* Rating con estrellas */
+.rating {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stars i {
+    color: var(--naranja);
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.stars i:hover {
+    transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .grid-entrenadores {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+    }
+
+    .entrenador-card {
+        min-height: 450px; /* Altura mínima mayor para móviles */
+    }
+
+    .entrenador-card img {
+        width: 100px; /* Reducimos aún más el tamaño de la imagen */
+        height: 100px;
+    }
+
+    .entrenador-card h3 {
+        font-size: 1.2rem; /* Reducimos el tamaño del título */
+    }
+
+    .entrenador-card p {
+        font-size: 0.9rem; /* Reducimos el tamaño del subtítulo */
+    }
+
+    .skill {
+        margin: 0.5rem 0; /* Menor margen para habilidades */
+    }
+
+    .rating {
+        flex-direction: column; /* Colocamos las estrellas en columna */
+        gap: 0.3rem;
+    }
+}
