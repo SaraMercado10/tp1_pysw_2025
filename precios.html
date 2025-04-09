@@ -7,76 +7,155 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/precios.css" />
+    <style>
+        /* Estilos adicionales para el toggle */
+        .annual-price { display: none; }
+        .monthly-price { display: block; }
+        
+        #plan-toggle:checked ~ .toggle-label .monthly-text { display: none; }
+        #plan-toggle:checked ~ .toggle-label .annual-text { display: inline; }
+        
+        #plan-toggle:checked ~ .precios-container .monthly-price { display: none; }
+        #plan-toggle:checked ~ .precios-container .annual-price { display: block; }
+    </style>
 </head>
 <body>
     <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
-
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-item">Extras</a>
-            <div class="dropdown-menu">
-              <a href="formulario.html">Contacto</a>
-              <a href="precios.html">Precio</a>
-              <a href="blog.html">Blog</a>
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-col logo">
+                <a href="#"><img src="./images/logo.png" alt="Logo"></a>
             </div>
-          </li>
-        </ul>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-col nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="clases.html" class="nav-item">Clases</a></li>
+                    <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-item">Extras</a>
+                        <div class="dropdown-menu">
+                            <a href="formulario.html">Contacto</a>
+                            <a href="precios.html">Precio</a>
+                            <a href="blog.html">Blog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-col social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </header>
+    <!-- Sección de Precios -->
+<section class="precios-section">
+  <h2>Nuestros Planes</h2>
+
+  <!-- Toggle entre mensual y anual -->
+  <input type="checkbox" id="plan-toggle" class="toggle-checkbox">
+  <div class="toggle-container">
+      <label for="plan-toggle" class="toggle-label">
+          <span class="monthly-text">Mensual</span>
+          <span class="annual-text">Anual</span>
+          <span class="toggle-slider"></span>
+      </label>
+  </div>
+
+  <!-- Contenedor para los precios -->
+  <div class="precios-grid">
+      <!-- Plan Básico -->
+      <div class="plan-card">
+          <h3>Básico</h3>
+          <p class="precio">
+              <span class="monthly-price">$29.99</span>
+              <span class="annual-price">$299.99</span>
+              <span class="monthly-price">/mes</span>
+              <span class="annual-price">/anual</span>
+          </p>
+          <ul>
+              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
+              <li><i class="fas fa-times"></i> Clases grupales limitadas</li>
+              <li><i class="fas fa-check"></i> Asesoramiento básico <span class="tooltip">Consulta inicial con un entrenador.</span></li>
+          </ul>
+          <button class="cta-button">Comprar ahora</button>
       </div>
 
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <!-- Plan Premium -->
+      <div class="plan-card destacado">
+          <h3>Premium</h3>
+          <p class="precio">
+              <span class="monthly-price">$49.99</span>
+              <span class="annual-price">$499.99</span>
+              <span class="monthly-price">/mes</span>
+              <span class="annual-price">/anual</span>
+          </p>
+          <ul>
+              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
+              <li><i class="fas fa-check"></i> Clases grupales ilimitadas</li>
+              <li><i class="fas fa-check"></i> Plan personalizado <span class="tooltip">Plan de entrenamiento diseñado por un experto.</span></li>
+          </ul>
+          <button class="cta-button">Comprar ahora</button>
       </div>
-    </nav>
-  </header>
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
+
+      <!-- Plan VIP -->
+      <div class="plan-card">
+          <h3>VIP</h3>
+          <p class="precio">
+              <span class="monthly-price">$79.99</span>
+              <span class="annual-price">$799.99</span>
+              <span class="monthly-price">/mes</span>
+              <span class="annual-price">/anual</span>
+          </p>
+          <ul>
+              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
+              <li><i class="fas fa-check"></i> Clases grupales ilimitadas</li>
+              <li><i class="fas fa-check"></i> Entrenador personal <span class="tooltip">Sesiones semanales con un entrenador certificado.</span></li>
+          </ul>
+          <button class="cta-button">Comprar ahora</button>
+      </div>
+  </div>
+</section>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col left">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Logo del gimnasio">
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center">
+                <h4>Nuestro Producto</h4>
+                <ul>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Clases</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col right">
+                <h4>Contáctanos</h4>
+                <p>Email: contacto@gimnasio.com</p>
+                <p>Dirección: Calle Ficticia 123, Ciudad</p>
+                <p>Tel: +54 9 11 1234 5678</p>
+            </div>
         </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-bottom">
+            <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
         </div>
-      </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
-    </div>
-  </footer>  
-  <script src="./script/script.js"></script>
+    </footer>
 </body>
 </html>
