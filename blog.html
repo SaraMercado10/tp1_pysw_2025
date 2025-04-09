@@ -3,80 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimnasio - Blog</title>
+    <title>Blog de Fitness | Revista</title>
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/blog.css">
 </head>
 <body>
     <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
-
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li class="dropdown">
-            <a href="#" class="nav-item">Extras</a>
-            <div class="dropdown-menu">
-              <a href="formulario.html">Contacto</a>
-              <a href="precios.html">Precio</a>
-              <a href="blog.html">Blog</a>
+    <header class="header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-col logo">
+                <a href="#"><img src="./images/logo.png" alt="Logo"></a>
             </div>
-          </li>
-        </ul>
-      </div>
 
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="nav-col nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-item">Inicio</a></li>
+                    <li><a href="clases.html" class="nav-item">Clases</a></li>
+                    <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="nav-item">Extras</a>
+                        <div class="dropdown-menu">
+                            <a href="formulario.html">Contacto</a>
+                            <a href="precios.html">Precio</a>
+                            <a href="blog.html">Blog</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-col social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-container">
+        <!-- Filtros por tags -->
+        <section class="tag-filters">
+            <h2>Filtrar por etiquetas:</h2>
+            <div class="tags-container">
+                <input type="radio" name="tag-filter" id="all-tags" checked>
+                <label for="all-tags">Todos</label>
+
+                <input type="radio" name="tag-filter" id="tag-cardio">
+                <label for="tag-cardio">Cardio</label>
+
+                <input type="radio" name="tag-filter" id="tag-fuerza">
+                <label for="tag-fuerza">Fuerza</label>
+
+                <input type="radio" name="tag-filter" id="tag-dieta">
+                <label for="tag-dieta">Dieta</label>
+
+                <input type="radio" name="tag-filter" id="tag-yoga">
+                <label for="tag-yoga">Yoga</label>
+            </div>
+        </section>
+
+        <!-- Artículos del blog -->
+        <section class="articles-grid">
+            <!-- Artículo 1 -->
+            <article class="blog-article" data-tags="dieta">
+                <figure class="article-image">
+                    <img src="./images/blog/muscular.webp" alt="Nutrición deportiva">
+                    <span class="article-category">Nutrición</span>
+                </figure>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">15 Mayo 2023</span>
+                        <span class="article-tag">Dieta</span>
+                    </div>
+                    <h2>Los mejores alimentos para ganar masa muscular</h2>
+                    <p>Descubre cómo optimizar tu dieta para maximizar tus ganancias musculares sin suplementos artificiales...</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Artículo 2 -->
+            <article class="blog-article featured" data-tags="fuerza cardio">
+                <figure class="article-image">
+                    <img src="./images/blog/hit.jpg" alt="Entrenamiento funcional">
+                    <span class="article-category">Entrenamiento</span>
+                </figure>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">10 Mayo 2023</span>
+                        <span class="article-tag">Fuerza</span>
+                        <span class="article-tag">Cardio</span>
+                    </div>
+                    <h2>Rutina HIIT para quemar grasa en casa</h2>
+                    <p>Esta rutina de 20 minutos te ayudará a acelerar tu metabolismo y quemar grasa sin necesidad de equipamiento...</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Artículo 3 -->
+            <article class="blog-article" data-tags="dieta">
+                <figure class="article-image">
+                    <img src="./images/blog/proteinas.jpg" alt="Suplementos deportivos">
+                    <span class="article-category">Suplementos</span>
+                </figure>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">5 Mayo 2023</span>
+                        <span class="article-tag">Dieta</span>
+                    </div>
+                    <h2>Guía definitiva de proteínas en polvo</h2>
+                    <p>¿Whey, caseína o vegetal? Te explicamos las diferencias y cómo elegir la mejor opción para tus objetivos...</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- Artículo 4 -->
+            <article class="blog-article" data-tags="yoga">
+                <figure class="article-image">
+                    <img src="./images/blog/meditacion.webp" alt="Yoga y meditación">
+                    <span class="article-category">Salud Mental</span>
+                </figure>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-date">1 Mayo 2023</span>
+                        <span class="article-tag">Yoga</span>
+                    </div>
+                    <h2>Meditación para mejorar tu rendimiento</h2>
+                    <p>La mente es tu herramienta más poderosa. Aprende técnicas de meditación para potenciar tus entrenamientos...</p>
+                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </section>
+
+        <!-- Sección de comentarios -->
+        <section class="comments-section">
+            <h2>Comentarios Recientes</h2>
+            
+            <div class="comment">
+                <div class="comment-avatar"></div>
+                <div class="comment-content">
+                    <h3>Carlos Rodríguez <span>Hace 2 días</span></h3>
+                    <p>Excelente artículo sobre nutrición. He seguido tus consejos y ya noto mejoras en mi rendimiento.</p>
+                </div>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-avatar" data-initial="A"></div>
+                <div class="comment-content">
+                    <h3>Ana Martínez <span>Hace 5 días</span></h3>
+                    <p>¿Recomiendas alguna marca específica de proteína vegetal? Me interesa la opción sin lactosa.</p>
+                </div>
+            </div>
+            
+            <form class="comment-form">
+                <h3>Deja tu comentario</h3>
+                <div class="form-group">
+                    <div class="comment-avatar" data-initial="T"></div>
+                    <textarea placeholder="Escribe tu comentario..."></textarea>
+                </div>
+                <button type="submit">Publicar comentario</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-col left">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Logo del gimnasio">
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col center">
+                <h4>Nuestro Producto</h4>
+                <ul>
+                    <li><a href="#">Planes</a></li>
+                    <li><a href="#">Clases</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col right">
+                <h4>Contáctanos</h4>
+                <p>Email: contacto@gimnasio.com</p>
+                <p>Dirección: Calle Ficticia 123, Ciudad</p>
+                <p>Tel: +54 9 11 1234 5678</p>
+            </div>
         </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-bottom">
+            <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
         </div>
-      </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
-    </div>
-  </footer>  
-  <script src="./script/script.js"></script>
+    </footer> 
+    <script src="./script/script.js"></script>
 </body>
 </html>
