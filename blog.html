@@ -47,131 +47,75 @@
       </div>
     </nav>
   </header>
-    <main class="blog-container">
-        <!-- Filtros por tags -->
-        <section class="tag-filters">
-            <h2>Filtrar por etiquetas:</h2>
-            <div class="tags-container">
-                <input type="radio" name="tag-filter" id="all-tags" checked>
-                <label for="all-tags">Todos</label>
+  <main class="blog-container">
+    <!-- Sistema de Filtrado -->
+    <div class="filtro-sistema">
+      <input type="radio" id="todos" name="filtro-blog" class="filtro-input" checked>
+      <input type="radio" id="nutricion" name="filtro-blog" class="filtro-input">
+      <input type="radio" id="ejercicios" name="filtro-blog" class="filtro-input">
+      <input type="radio" id="suplementos" name="filtro-blog" class="filtro-input">
+      <input type="radio" id="consejos" name="filtro-blog" class="filtro-input">
 
-                <input type="radio" name="tag-filter" id="tag-cardio">
-                <label for="tag-cardio">Cardio</label>
+      <div class="filtros-container">
+        <div class="filtros-blog">
+          <label for="todos" class="filtro-label">Todos</label>
+          <label for="nutricion" class="filtro-label">Nutrición</label>
+          <label for="ejercicios" class="filtro-label">Ejercicios</label>
+          <label for="suplementos" class="filtro-label">Suplementos</label>
+          <label for="consejos" class="filtro-label">Consejos</label>
+        </div>
+      </div>
 
-                <input type="radio" name="tag-filter" id="tag-fuerza">
-                <label for="tag-fuerza">Fuerza</label>
-
-                <input type="radio" name="tag-filter" id="tag-dieta">
-                <label for="tag-dieta">Dieta</label>
-
-                <input type="radio" name="tag-filter" id="tag-yoga">
-                <label for="tag-yoga">Yoga</label>
+      <!-- Grid tipo Newspaper -->
+      <div class="blog-grid">
+        <!-- Artículo Destacado -->
+        <article class="blog-card destacado nutricion" data-categoria="nutricion">
+          <figure class="blog-imagen">
+            <img src="./images/blog/nutricion.jpg" alt="Guía de nutrición">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Nutrición</span>
+              <span class="tag">Dietas</span>
             </div>
-        </section>
-
-        <!-- Artículos del blog -->
-        <section class="articles-grid">
-            <!-- Artículo 1 -->
-            <article class="blog-article" data-tags="dieta">
-                <figure class="article-image">
-                    <img src="./images/blog/muscular.webp" alt="Nutrición deportiva">
-                    <span class="article-category">Nutrición</span>
-                </figure>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-date">15 Mayo 2023</span>
-                        <span class="article-tag">Dieta</span>
-                    </div>
-                    <h2>Los mejores alimentos para ganar masa muscular</h2>
-                    <p>Descubre cómo optimizar tu dieta para maximizar tus ganancias musculares sin suplementos artificiales...</p>
-                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Artículo 2 -->
-            <article class="blog-article featured" data-tags="fuerza cardio">
-                <figure class="article-image">
-                    <img src="./images/blog/hit.jpg" alt="Entrenamiento funcional">
-                    <span class="article-category">Entrenamiento</span>
-                </figure>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-date">10 Mayo 2023</span>
-                        <span class="article-tag">Fuerza</span>
-                        <span class="article-tag">Cardio</span>
-                    </div>
-                    <h2>Rutina HIIT para quemar grasa en casa</h2>
-                    <p>Esta rutina de 20 minutos te ayudará a acelerar tu metabolismo y quemar grasa sin necesidad de equipamiento...</p>
-                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Artículo 3 -->
-            <article class="blog-article" data-tags="dieta">
-                <figure class="article-image">
-                    <img src="./images/blog/proteinas.jpg" alt="Suplementos deportivos">
-                    <span class="article-category">Suplementos</span>
-                </figure>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-date">5 Mayo 2023</span>
-                        <span class="article-tag">Dieta</span>
-                    </div>
-                    <h2>Guía definitiva de proteínas en polvo</h2>
-                    <p>¿Whey, caseína o vegetal? Te explicamos las diferencias y cómo elegir la mejor opción para tus objetivos...</p>
-                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <!-- Artículo 4 -->
-            <article class="blog-article" data-tags="yoga">
-                <figure class="article-image">
-                    <img src="./images/blog/meditacion.webp" alt="Yoga y meditación">
-                    <span class="article-category">Salud Mental</span>
-                </figure>
-                <div class="article-content">
-                    <div class="article-meta">
-                        <span class="article-date">1 Mayo 2023</span>
-                        <span class="article-tag">Yoga</span>
-                    </div>
-                    <h2>Meditación para mejorar tu rendimiento</h2>
-                    <p>La mente es tu herramienta más poderosa. Aprende técnicas de meditación para potenciar tus entrenamientos...</p>
-                    <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </section>
-
-        <!-- Sección de comentarios -->
-        <section class="comments-section">
-            <h2>Comentarios Recientes</h2>
-            
-            <div class="comment">
-                <div class="comment-avatar"></div>
-                <div class="comment-content">
-                    <h3>Carlos Rodríguez <span>Hace 2 días</span></h3>
-                    <p>Excelente artículo sobre nutrición. He seguido tus consejos y ya noto mejoras en mi rendimiento.</p>
-                </div>
+            <h2>Guía Completa de Alimentación Fitness</h2>
+            <p class="blog-excerpt">Descubre cómo optimizar tu dieta para maximizar resultados en el gimnasio...</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 Mayo 2023</span>
+              <span class="blog-comments">24 Comentarios</span>
             </div>
-            
-            <div class="comment">
-                <div class="comment-avatar" data-initial="A"></div>
-                <div class="comment-content">
-                    <h3>Ana Martínez <span>Hace 5 días</span></h3>
-                    <p>¿Recomiendas alguna marca específica de proteína vegetal? Me interesa la opción sin lactosa.</p>
-                </div>
-            </div>
-            
-            <form class="comment-form">
-                <h3>Deja tu comentario</h3>
-                <div class="form-group">
-                    <div class="comment-avatar" data-initial="T"></div>
-                    <textarea placeholder="Escribe tu comentario..."></textarea>
-                </div>
-                <button type="submit">Publicar comentario</button>
-            </form>
-        </section>
-    </main>
+          </div>
+        </article>
 
+        <!-- Artículo Normal 1 -->
+        <article class="blog-card ejercicios" data-categoria="ejercicios">
+          <!-- Contenido del artículo -->
+        </article>
+
+        <!-- Artículo Normal 2 -->
+        <article class="blog-card suplementos" data-categoria="suplementos">
+          <!-- Contenido del artículo -->
+        </article>
+
+        <!-- Más artículos... -->
+      </div>
+    </div>
+
+    <!-- Sección de Comentarios -->
+    <section class="comentarios-section">
+      <h2 class="comentarios-titulo"><i class="fas fa-comments"></i> Comentarios Destacados</h2>
+      
+      <div class="comentario-card">
+        <div class="comentario-avatar"></div>
+        <div class="comentario-content">
+          <h3>Carlos Rodríguez <span class="comentario-fecha">10/06/2023</span></h3>
+          <p>Excelente artículo, llevo 3 meses siguiendo estos consejos y he visto cambios increíbles en mi rendimiento.</p>
+        </div>
+      </div>
+
+      <!-- Más comentarios... -->
+    </section>
+  </main>
     <footer>
         <div class="footer-top">
             <div class="footer-col left">

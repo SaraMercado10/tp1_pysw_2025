@@ -23,6 +23,7 @@ body {
   --texto-card: #f8f9fa;
   --fondo-tabla: #222;
   --borde: #444;
+  background-color: var(--gris-800);
 }
 
 /* ========== FILTRO CORREGIDO ========== */
@@ -59,13 +60,21 @@ body {
 
 /* ========== ESTILOS EXISTENTES (INALTERADOS) ========== */
 .filtros-container {
-  background: var(--fondo-card);
+  background: var(--gris-600);
   padding: 1.5rem;
   margin: 1rem 0;
   box-shadow: var(--sombra);
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+body.light-mode{
+  background-color: var(--blanco);
+}
+
+body.light-mode .filtros-container{
+  background-color: #7debff;
 }
 
 .filtros {
@@ -94,6 +103,10 @@ body {
   border-color: var(--naranja);
 }
 
+.filtros-container .filtros .filtro-label:hover{
+  background-color: var(--naranja);
+}
+
 .clases-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -107,6 +120,10 @@ body {
   color: var(--texto-card);
   position: relative;
   padding-bottom: 1rem;
+}
+
+body.light-mode .clases-container h1, body.light-mode .horarios-section h2{
+  color: blue;
 }
 
 .clases-container h1::after {
@@ -125,7 +142,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
-  margin: 3rem 0;
+  margin: 0.02rem 0;
 }
 
 .clase-card {
@@ -135,6 +152,14 @@ body {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: var(--sombra);
   border: 1px solid var(--borde);
+}
+
+body.light-mode .clase-card{
+  background-color: #40dbff;
+}
+
+body.light-mode .clase-card h3, body.light-mode .clase-card p{
+  color: var(--blanco);
 }
 
 .clase-img-container {
@@ -201,9 +226,9 @@ body {
 }
 
 .horarios-section {
-  margin-top: 5rem;
-  padding-top: 3rem;
-  border-top: 1px solid var(--borde);
+  margin-top: 0.02rem;
+  padding-top: 0.02rem;
+  /*border-top: 1px solid var(--borde);*/
 }
 
 .horarios-section h2 {
