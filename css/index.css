@@ -1,12 +1,14 @@
 :root {
-  --naranja: #ff7f11;
+  --gris-600: #6d6d6d;
+  --gris-800: #454545;
   --blanco: #ffffff;
   --negro: #000000;
+  --blue-light: #0074d9;
   --fondo-transparente: rgba(255, 255, 255, 0.05);
 }
 
 .hero-section {
-  background-color: #575a65;
+  background-color: var(--gris-800);
   color: white;
   text-align: center;
   padding: 2rem 1rem 2rem;
@@ -90,7 +92,7 @@
 }
 
 .clases-destacadas {
-  background-color: #575a65;
+  background-color: var(--gris-800);
   color: #fff;
   padding: 1rem 1rem;
   text-align: center;
@@ -146,7 +148,8 @@
 }
 
 .contador-section {
-  background-color: var(--naranja);
+  /*background-color: var(--naranja);*/
+  background-color: var(--gris-600);
   color: white;
   padding: 3rem 1rem;
   text-align: center;
@@ -168,7 +171,7 @@
 
 .testimonios-section {
   padding: 2rem 1rem;
-  background-color: #575a65;
+  background-color: var(--gris-800);
   text-align: center;
   color: white;
 }
@@ -217,7 +220,7 @@
 }
 
 .newsletter-section {
-  background-color: var(--naranja);
+  background-color: var(--gris-600);
   padding: 3rem 1rem;
   color: var(--blanco);
   text-align: center;
@@ -283,17 +286,17 @@ body.light-mode .testimonios-section {
 }
 
 body.light-mode .newsletter-section {
-  background-color: #0074d9;
+  background-color: var(--blue-light);
   color: var(--blanco);
 }
 
 body.light-mode .contador-section {
-  background-color: #0074d9;
+  background-color: var(--blue-light);
   color: white;
 }
 
 body.light-mode .clase-card {
-  background-color: #0074d9;
+  background-color: var(--blue-light);
   color: var(--blanco);
 }
 
@@ -303,5 +306,5 @@ body.light-mode body {
 }
 
 body.light-mode .map-section iframe {
-  border: 2px solid #0074d9;
+  border: 2px solid var(--blue-light);
 }
