@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <!-- Header con mega menú -->
+   <!-- Header con mega menú -->
   <header class="header">
     <nav class="navbar" id="navbar">
       <div class="nav-col logo">
@@ -58,74 +58,76 @@
       </div>
     </nav>
   </header>
-    <!-- Sección de Precios -->
-<section class="precios-section">
-  <h2>Nuestros Planes</h2>
+  <!-- Sección Precios -->
+  <section class="seccion-precios">
+    <h2>Nuestros Planes</h2>
+    <p>Elige el que más te guste</p>
 
-  <!-- Toggle entre mensual y anual -->
-  <input type="checkbox" id="plan-toggle" class="toggle-checkbox">
-  <div class="toggle-container">
-      <label for="plan-toggle" class="toggle-label">
-          <span class="monthly-text">Mensual</span>
-          <span class="annual-text">Anual</span>
-          <span class="toggle-slider"></span>
-      </label>
-  </div>
+    <!-- Toggle Mensual/Anual -->
+    <input type="checkbox" id="toggle-plan" name="toggle-plan">
+    <div class="contenedor-precios">
+        <div class="toggle-container">
+            <label for="toggle-plan" class="toggle-label">
+                <span>Mensual</span>
+                <span class="toggle-switch"></span>
+                <span>Anual</span>
+            </label>
+        </div>
+    </div>
 
-  <!-- Contenedor para los precios -->
-  <div class="precios-grid">
-      <!-- Plan Básico -->
-      <div class="plan-card">
-          <h3>Básico</h3>
-          <p class="precio">
-              <span class="monthly-price">$29.99</span>
-              <span class="annual-price">$299.99</span>
-              <span class="monthly-price">/mes</span>
-              <span class="annual-price">/anual</span>
-          </p>
-          <ul>
-              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
-              <li><i class="fas fa-times"></i> Clases grupales limitadas</li>
-              <li><i class="fas fa-check"></i> Asesoramiento básico <span class="tooltip">Consulta inicial con un entrenador.</span></li>
-          </ul>
-          <button class="cta-button">Comprar ahora</button>
-      </div>
-
-      <!-- Plan Premium -->
-      <div class="plan-card destacado">
-          <h3>Premium</h3>
-          <p class="precio">
-              <span class="monthly-price">$49.99</span>
-              <span class="annual-price">$499.99</span>
-              <span class="monthly-price">/mes</span>
-              <span class="annual-price">/anual</span>
-          </p>
-          <ul>
-              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
-              <li><i class="fas fa-check"></i> Clases grupales ilimitadas</li>
-              <li><i class="fas fa-check"></i> Plan personalizado <span class="tooltip">Plan de entrenamiento diseñado por un experto.</span></li>
-          </ul>
-          <button class="cta-button">Comprar ahora</button>
-      </div>
-
-      <!-- Plan VIP -->
-      <div class="plan-card">
-          <h3>VIP</h3>
-          <p class="precio">
-              <span class="monthly-price">$79.99</span>
-              <span class="annual-price">$799.99</span>
-              <span class="monthly-price">/mes</span>
-              <span class="annual-price">/anual</span>
-          </p>
-          <ul>
-              <li><i class="fas fa-check"></i> Acceso ilimitado <span class="tooltip">Incluye acceso a todas las áreas del gimnasio.</span></li>
-              <li><i class="fas fa-check"></i> Clases grupales ilimitadas</li>
-              <li><i class="fas fa-check"></i> Entrenador personal <span class="tooltip">Sesiones semanales con un entrenador certificado.</span></li>
-          </ul>
-          <button class="cta-button">Comprar ahora</button>
-      </div>
-  </div>
+    <!-- Tabla de Precios -->
+    <div class="tabla-precios">
+        <div class="plan">
+            <h3>Básico</h3>
+            <div class="precio">
+                <span class="mensual">$25</span>
+                <span class="anual">$250</span>
+                <span class="periodo mensual">/mes</span>
+                <span class="periodo anual">/año</span>
+            </div>
+            <ul>
+                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
+                <li data-tooltip="Clases básicas incluidas">1 Clase Grupal<span class="tooltip">Yoga o Pilates</span></li>
+                <li class="no-incluido">Entrenador Personal</li>
+                <li class="no-incluido">Nutricionista</li>
+            </ul>
+            <button class="btn-suscribir">Suscribirse</button>
+        </div>
+        <div class="plan destacado">
+            <h3>Pro</h3>
+            <div class="precio">
+                <span class="mensual">$45</span>
+                <span class="anual">$450</span>
+                <span class="periodo mensual">/mes</span>
+                <span class="periodo anual">/año</span>
+            </div>
+            <ul>
+                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
+                <li data-tooltip="Todas las clases grupales incluidas">Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span></li>
+                <li data-tooltip="1 sesión mensual con entrenador">Entrenador Personal<span class="tooltip">1 vez al mes</span></li>
+                <li class="no-incluido">Nutricionista</li>
+            </ul>
+            <button class="btn-suscribir">Suscribirse</button>
+        </div>
+        <div class="plan">
+            <h3>Élite</h3>
+            <div class="precio">
+                <span class="mensual">$65</span>
+                <span class="anual">$650</span>
+                <span class="periodo mensual">/mes</span>
+                <span class="periodo anual">/año</span>
+            </div>
+            <ul>
+                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
+                <li data-tooltip="Todas las clases grupales incluidas">Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span></li>
+                <li data-tooltip="Sesiones semanales con entrenador">Entrenador Personal<span class="tooltip">1 vez por semana</span></li>
+                <li data-tooltip="Plan personalizado incluido">Nutricionista<span class="tooltip">Consulta mensual</span></li>
+            </ul>
+            <button class="btn-suscribir">Suscribirse</button>
+        </div>
+    </div>
 </section>
+
     <footer>
         <div class="footer-top">
             <div class="footer-col left">
@@ -158,5 +160,6 @@
             <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
         </div>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 </html>

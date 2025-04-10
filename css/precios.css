@@ -1,270 +1,276 @@
-/* Variables globales */
+/* Variables CSS */
 :root {
     --naranja: #ff7f11;
+    --gris-800: #454545;
+    --gris-600: #6d6d6d;
     --blanco: #ffffff;
     --negro: #000000;
-    --gris-oscuro: #222;
-    --gris-claro: #eee;
-}
+    --blue-light: #0074d9;
+  }
+  
+  body.light-mode {
+    --color-fondo: var(--blanco);
+    --color-texto: var(--negro);
+    --color-acento: var(--blue-light);
+    --color-sombra: rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-mode {
+    --color-fondo: var(--gris-800);
+    --color-texto: var(--blanco);
+    --color-acento: var(--gris-600);
+    --color-sombra: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Sección Precios */
+  .seccion-precios {
+    padding: 5rem 2rem;
+    background: var(--gris-800);
+    text-align: center;
+  }
 
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  body.light-mode .seccion-precios{
+    background-color: var(--blanco);
+  }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--gris-claro);
+  body.light-mode .seccion-precios h2, body.light-mode .seccion-precios p{
     color: var(--negro);
-}
-
-/* ===== SECCIÓN PRECIOS ===== */
-.precios-section {
-    max-width: 1200px;
+  }
+  
+  .seccion-precios h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .seccion-precios p {
+    font-size: 1.2rem;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+  }
+  
+  /* Toggle Mensual/Anual */
+  #toggle-plan {
+    display: none;
+  }
+  
+  .contenedor-precios {
     margin: 2rem auto;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-}
-
-.precios-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: var(--naranja);
-}
-
-/* Toggle mejorado con cambio visual claro */
-.toggle-container {
+    max-width: 300px;
+  }
+  
+  .toggle-container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
-    gap: 15px;
-}
-
-.toggle-checkbox {
-    position: absolute;
-    opacity: 0;
-}
-
-.toggle-wrapper {
-    position: relative;
+    color: var(--blanco);
+  }
+  
+  .toggle-label {
     display: flex;
     align-items: center;
-}
-
-.toggle-label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-/* Estilo del interruptor */
-.toggle-slider {
-    position: relative;
-    width: 80px; /* Más ancho para mejor visualización */
-    height: 34px;
-    background-color: var(--blanco);
-    border-radius: 34px;
-    transition: all 0.4s ease;
-    border: 2px solid var(--naranja);
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
-}
-
-/* Círculo deslizante */
-.toggle-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--naranja);
-    transition: all 0.4s ease;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-/* Texto dentro del toggle */
-.toggle-text {
-    position: absolute;
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    pointer-events: none;
-    padding: 0 15px;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.toggle-text span {
-    transition: all 0.3s ease;
-}
-
-.toggle-text .monthly-text {
-    color: var(--naranja);
-}
-
-.toggle-text .annual-text {
-    color: var(--gris-oscuro);
-    opacity: 0.7;
-}
-
-/* Estado activo (Anual) */
-.toggle-checkbox:checked + .toggle-label .toggle-slider {
-    background-color: var(--naranja);
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-slider:before {
-    background-color: var(--blanco);
-    transform: translateX(46px); /* Movimiento más largo */
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-text .monthly-text {
-    color: var(--gris-oscuro);
-    opacity: 0.7;
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-text .annual-text {
-    color: var(--blanco);
-    opacity: 1;
-}
-
-/* Mostrar/ocultar precios */
-.monthly-price {
-    display: block;
-}
-
-.annual-price {
-    display: none;
-}
-
-.toggle-checkbox:checked ~ .precios-grid .monthly-price {
-    display: none;
-}
-
-.toggle-checkbox:checked ~ .precios-grid .annual-price {
-    display: block;
-}
-
-/* Grid de precios */
-.precios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    justify-content: center;
-}
-
-.plan-card {
-    background: var(--blanco);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.plan-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.plan-card.destacado {
-    border: 2px solid var(--naranja);
-}
-
-.plan-card h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--naranja);
-}
-
-.precio {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--negro);
-    position: relative;
-}
-
-.precio span:last-child {
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    color: var(--gris-oscuro);
-}
-
-/* Tooltips explicativos */
-.plan-card ul li {
+    color: var(--color-texto);
     position: relative;
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.plan-card ul li .tooltip {
-    visibility: hidden;
-    background-color: var(--negro);
-    color: var(--blanco);
-    text-align: center;
-    border-radius: 5px;
-    padding: 0.5rem;
+    width: 200px;
+  }
+  
+  .toggle-switch {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 20px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .toggle-switch::before {
+    content: '';
     position: absolute;
-    z-index: 1;
-    bottom: 125%;
+    width: 16px;
+    height: 16px;
+    background: var(--blanco);
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+  }
+  
+  #toggle-plan:checked + .contenedor-precios .toggle-label .toggle-switch {
+    background: var(--naranja);
+  }
+  
+  #toggle-plan:checked + .contenedor-precios .toggle-label .toggle-switch::before {
+    transform: translateX(20px);
+  }
+  
+  /* Tabla de Precios */
+  .tabla-precios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .plan {
+    background: var(--gris-600);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--color-sombra);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  body.light-mode .plan{
+    background-color: var(--blue-light);
+  }
+  
+  .plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+  }
+  
+  .plan.destacado {
+    border: 2px solid var(--naranja);
+  }
+  
+  .plan h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+  }
+  
+  .precio {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Control de visibilidad de precios */
+  .precio .mensual,
+  .precio .periodo.mensual {
+    display: inline;
+  }
+  
+  .precio .anual,
+  .precio .periodo.anual {
+    display: none;
+  }
+  
+  #toggle-plan:checked ~ .tabla-precios .precio .mensual,
+  #toggle-plan:checked ~ .tabla-precios .precio .periodo.mensual {
+    display: none;
+  }
+  
+  #toggle-plan:checked ~ .tabla-precios .precio .anual,
+  #toggle-plan:checked ~ .tabla-precios .precio .periodo.anual {
+    display: inline;
+  }
+  
+  .precio .periodo {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--blanco);
+  }
+  
+  /* Lista de características */
+  .plan ul {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+  
+  .plan li {
+    font-size: 1rem;
+    color: var(--blanco);
+    padding: 0.8rem 0;
+    position: relative;
+  }
+  
+  .plan li.no-incluido {
+    color: #999;
+    text-decoration: line-through;
+  }
+  
+  .plan li[data-tooltip] {
+    cursor: help;
+  }
+  
+  .tooltip {
+    display: none;
+    position: absolute;
+    background: var(--color-texto);
+    color: var(--color-fondo);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    top: -2.5rem;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.plan-card ul li:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
-
-.cta-button {
-    background-color: var(--naranja);
-    color: var(--blanco);
-    padding: 1rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px var(--color-sombra);
+  }
+  
+  .plan li:hover .tooltip {
+    display: block;
+  }
+  
+  /* Botón Suscribirse */
+  .btn-suscribir {
+    background: var(--naranja);
+    color: var(--color-fondo);
     border: none;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 1rem;
-}
-
-.cta-button:hover {
-    background-color: #e06f00;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .precios-section h2 {
-        font-size: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn-suscribir:hover,
+  .btn-suscribir:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 77, 77, 0.6);
+  }
+  
+  .btn-suscribir:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.4);
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .seccion-precios h2 {
+      font-size: 2rem;
     }
-
-    .plan-card {
-        padding: 1.5rem;
+  
+    .tabla-precios {
+      grid-template-columns: 1fr;
     }
-
+  
+    .toggle-label {
+      font-size: 0.9rem;
+    }
+  
+    .plan h3 {
+      font-size: 1.5rem;
+    }
+  
     .precio {
-        font-size: 1.5rem;
+      font-size: 1.8rem;
     }
-
-    .cta-button {
-        font-size: 0.9rem;
-        padding: 0.8rem;
-    }
-
-    .toggle-slider {
-        width: 70px;
-    }
-
-    .toggle-slider:before {
-        transform: translateX(36px);
-    }
-}
+  }
