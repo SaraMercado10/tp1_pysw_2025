@@ -48,7 +48,7 @@
     </nav>
   </header>
   <main class="blog-container">
-    <!-- Sistema de Filtrado -->
+    <!-- Sistema de Filtrado (estructura corregida) -->
     <div class="filtro-sistema">
       <input type="radio" id="todos" name="filtro-blog" class="filtro-input" checked>
       <input type="radio" id="nutricion" name="filtro-blog" class="filtro-input">
@@ -66,12 +66,12 @@
         </div>
       </div>
 
-      <!-- Grid tipo Newspaper -->
+      <!-- Grid de Artículos -->
       <div class="blog-grid">
-        <!-- Artículo Destacado -->
-        <article class="blog-card destacado nutricion" data-categoria="nutricion">
+        <!-- Artículo 1 - Nutrición -->
+        <article class="blog-card destacado nutricion">
           <figure class="blog-imagen">
-            <img src="./images/blog/nutricion.jpg" alt="Guía de nutrición">
+            <img src="./images/blog/nutricion1.png" alt="Guía de nutrición">
           </figure>
           <div class="blog-content">
             <div class="blog-tags">
@@ -79,25 +79,223 @@
               <span class="tag">Dietas</span>
             </div>
             <h2>Guía Completa de Alimentación Fitness</h2>
-            <p class="blog-excerpt">Descubre cómo optimizar tu dieta para maximizar resultados en el gimnasio...</p>
+            <p class="blog-excerpt">Aprende a combinar alimentos para maximizar tus resultados...</p>
             <div class="blog-meta">
               <span class="blog-date">15 Mayo 2023</span>
-              <span class="blog-comments">24 Comentarios</span>
+              <span class="blog-comments">28 Comentarios</span>
             </div>
           </div>
         </article>
 
-        <!-- Artículo Normal 1 -->
-        <article class="blog-card ejercicios" data-categoria="ejercicios">
-          <!-- Contenido del artículo -->
+        <!-- Artículo 2 - Ejercicios -->
+        <article class="blog-card ejercicios">
+          <figure class="blog-imagen">
+            <img src="./images/blog/ejercicio1.webp" alt="Rutina avanzada">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Ejercicios</span>
+              <span class="tag">Rutinas</span>
+            </div>
+            <h2>Rutina Avanzada de 4 Semanas</h2>
+            <p class="blog-excerpt">Desafía tus límites con esta rutina para atletas...</p>
+            <div class="blog-meta">
+              <span class="blog-date">2 Junio 2023</span>
+              <span class="blog-comments">15 Comentarios</span>
+            </div>
+          </div>
         </article>
 
-        <!-- Artículo Normal 2 -->
-        <article class="blog-card suplementos" data-categoria="suplementos">
-          <!-- Contenido del artículo -->
+        <!-- Artículo 3 - Suplementos -->
+        <article class="blog-card suplementos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/suplemento1.jpg" alt="Suplementos naturales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Suplementos</span>
+              <span class="tag">Naturales</span>
+            </div>
+            <h2>Suplementos 100% Naturales</h2>
+            <p class="blog-excerpt">Alternativas orgánicas para potenciar tu rendimiento...</p>
+            <div class="blog-meta">
+              <span class="blog-date">10 Julio 2023</span>
+              <span class="blog-comments">32 Comentarios</span>
+            </div>
+          </div>
         </article>
 
-        <!-- Más artículos... -->
+        <!-- Artículo 4 - Consejos -->
+        <article class="blog-card consejos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/consejo1.webp" alt="Consejos profesionales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Consejos</span>
+              <span class="tag">Profesionales</span>
+            </div>
+            <h2>20 Consejos de Entrenadores Elite</h2>
+            <p class="blog-excerpt">Secretos que solo los profesionales conocen...</p>
+            <div class="blog-meta">
+              <span class="blog-date">22 Agosto 2023</span>
+              <span class="blog-comments">41 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card nutricion">
+          <figure class="blog-imagen">
+            <img src="./images/blog/nutricion2.jpg" alt="Guía de nutrición">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Nutrición</span>
+              <span class="tag">Dietas</span>
+            </div>
+            <h2>Guía Completa de Alimentación Fitness</h2>
+            <p class="blog-excerpt">Aprende a combinar alimentos para maximizar tus resultados...</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 Mayo 2023</span>
+              <span class="blog-comments">28 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card ejercicios">
+          <figure class="blog-imagen">
+            <img src="./images/blog/ejercicio2.jpg" alt="Rutina avanzada">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Ejercicios</span>
+              <span class="tag">Rutinas</span>
+            </div>
+            <h2>Rutina Avanzada de 4 Semanas</h2>
+            <p class="blog-excerpt">Desafía tus límites con esta rutina para atletas...</p>
+            <div class="blog-meta">
+              <span class="blog-date">2 Junio 2023</span>
+              <span class="blog-comments">15 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card suplementos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/suplemento2.jpg" alt="Suplementos naturales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Suplementos</span>
+              <span class="tag">Naturales</span>
+            </div>
+            <h2>Suplementos 100% Naturales</h2>
+            <p class="blog-excerpt">Alternativas orgánicas para potenciar tu rendimiento...</p>
+            <div class="blog-meta">
+              <span class="blog-date">10 Julio 2023</span>
+              <span class="blog-comments">32 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card consejos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/consejos2.jpg" alt="Consejos profesionales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Consejos</span>
+              <span class="tag">Profesionales</span>
+            </div>
+            <h2>20 Consejos de Entrenadores Elite</h2>
+            <p class="blog-excerpt">Secretos que solo los profesionales conocen...</p>
+            <div class="blog-meta">
+              <span class="blog-date">22 Agosto 2023</span>
+              <span class="blog-comments">41 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card nutricion">
+          <figure class="blog-imagen">
+            <img src="./images/blog/nutricion3.jpg" alt="Guía de nutrición">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Nutrición</span>
+              <span class="tag">Dietas</span>
+            </div>
+            <h2>Guía Completa de Alimentación Fitness</h2>
+            <p class="blog-excerpt">Aprende a combinar alimentos para maximizar tus resultados...</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 Mayo 2023</span>
+              <span class="blog-comments">28 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card ejercicios">
+          <figure class="blog-imagen">
+            <img src="./images/blog/ejercicio3.jpg" alt="Rutina avanzada">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Ejercicios</span>
+              <span class="tag">Rutinas</span>
+            </div>
+            <h2>Rutina Avanzada de 4 Semanas</h2>
+            <p class="blog-excerpt">Desafía tus límites con esta rutina para atletas...</p>
+            <div class="blog-meta">
+              <span class="blog-date">2 Junio 2023</span>
+              <span class="blog-comments">15 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card nutricion">
+          <figure class="blog-imagen">
+            <img src="./images/blog/nutricion4.jpg" alt="Guía de nutrición">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Nutrición</span>
+              <span class="tag">Dietas</span>
+            </div>
+            <h2>Guía Completa de Alimentación Fitness</h2>
+            <p class="blog-excerpt">Aprende a combinar alimentos para maximizar tus resultados...</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 Mayo 2023</span>
+              <span class="blog-comments">28 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card suplementos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/suplemento3.jpg" alt="Suplementos naturales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Suplementos</span>
+              <span class="tag">Naturales</span>
+            </div>
+            <h2>Suplementos 100% Naturales</h2>
+            <p class="blog-excerpt">Alternativas orgánicas para potenciar tu rendimiento...</p>
+            <div class="blog-meta">
+              <span class="blog-date">10 Julio 2023</span>
+              <span class="blog-comments">32 Comentarios</span>
+            </div>
+          </div>
+        </article>
+        <article class="blog-card consejos">
+          <figure class="blog-imagen">
+            <img src="./images/blog/consejo3.webp" alt="Consejos profesionales">
+          </figure>
+          <div class="blog-content">
+            <div class="blog-tags">
+              <span class="tag">Consejos</span>
+              <span class="tag">Profesionales</span>
+            </div>
+            <h2>20 Consejos de Entrenadores Elite</h2>
+            <p class="blog-excerpt">Secretos que solo los profesionales conocen...</p>
+            <div class="blog-meta">
+              <span class="blog-date">22 Agosto 2023</span>
+              <span class="blog-comments">41 Comentarios</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
 
@@ -108,12 +306,18 @@
       <div class="comentario-card">
         <div class="comentario-avatar"></div>
         <div class="comentario-content">
-          <h3>Carlos Rodríguez <span class="comentario-fecha">10/06/2023</span></h3>
-          <p>Excelente artículo, llevo 3 meses siguiendo estos consejos y he visto cambios increíbles en mi rendimiento.</p>
+          <h3>Ana Martínez <span class="comentario-fecha">10/06/2023</span></h3>
+          <p>La guía de nutrición cambió completamente mi forma de alimentarme. ¡Gracias!</p>
         </div>
       </div>
 
-      <!-- Más comentarios... -->
+      <div class="comentario-card">
+        <div class="comentario-avatar"></div>
+        <div class="comentario-content">
+          <h3>Carlos López <span class="comentario-fecha">15/07/2023</span></h3>
+          <p>Los suplementos naturales fueron un antes y después en mi recuperación muscular.</p>
+        </div>
+      </div>
     </section>
   </main>
     <footer>
