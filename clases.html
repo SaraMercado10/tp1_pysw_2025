@@ -47,113 +47,157 @@
       </div>
     </nav>
   </header>
-    <!-- Filtros -->
-<section class="filtros-section">
-  <div class="filtros-container">
-    <input type="radio" id="todas" name="filtro" checked>
-    <label for="todas">Todas</label>
+  <main>
+    <!-- Sistema de filtrado corregido -->
+    <div class="filtro-sistema">
+      <!-- Inputs radio ocultos -->
+      <input type="radio" id="todas" name="filtro" class="filtro-input" checked>
+      <input type="radio" id="musculacion" name="filtro" class="filtro-input">
+      <input type="radio" id="crossfit" name="filtro" class="filtro-input">
+      <input type="radio" id="yoga" name="filtro" class="filtro-input">
+      <input type="radio" id="spinning" name="filtro" class="filtro-input">
 
-    <input type="radio" id="musculacion" name="filtro">
-    <label for="musculacion">Musculación</label>
+      <!-- Controles de filtro visibles -->
+      <div class="filtros-container">
+        <div class="filtros">
+          <label for="todas" class="filtro-label">Todas</label>
+          <label for="musculacion" class="filtro-label">Musculación</label>
+          <label for="crossfit" class="filtro-label">CrossFit</label>
+          <label for="yoga" class="filtro-label">Yoga</label>
+          <label for="spinning" class="filtro-label">Spinning</label>
+        </div>
+      </div>
 
-    <input type="radio" id="crossfit" name="filtro">
-    <label for="crossfit">CrossFit</label>
+      <!-- Contenedor de clases -->
+      <div class="clases-container">
+        <h1>Nuestras Clases</h1>
+        
+        <div class="clases-grid">
+          <!-- Clase 1 -->
+          <article class="clase-card musculacion">
+            <div class="clase-img-container">
+              <img src="./images/clases/musculacion1.jpg" alt="Musculación Inicial">
+              <div class="clase-overlay">
+                <h3>Musculación Inicial</h3>
+                <p>Aprende técnicas básicas con supervisión profesional</p>
+                <span class="clase-horario">Lun/Mie 18:00hs</span>
+              </div>
+            </div>
+            <div class="clase-info">
+              <h3>Musculación Inicial</h3>
+              <p class="clase-desc">Entrenamiento guiado para principiantes</p>
+            </div>
+          </article>
 
-    <input type="radio" id="yoga" name="filtro">
-    <label for="yoga">Yoga</label>
+          <!-- Clase 2 -->
+          <article class="clase-card crossfit">
+            <div class="clase-img-container">
+              <img src="./images/clases/crossfit1.jpg" alt="CrossFit Avanzado">
+              <div class="clase-overlay">
+                <h3>CrossFit Avanzado</h3>
+                <p>Entrenamiento de alta intensidad</p>
+                <span class="clase-horario">Mar/Jue 19:30hs</span>
+              </div>
+            </div>
+            <div class="clase-info">
+              <h3>CrossFit Avanzado</h3>
+              <p class="clase-desc">Para atletas experimentados</p>
+            </div>
+          </article>
 
-    <input type="radio" id="spinning" name="filtro">
-    <label for="spinning">Spinning</label>
-  </div>
-</section>
+          <!-- Clase 3 -->
+          <article class="clase-card yoga">
+            <div class="clase-img-container">
+              <img src="./images/clases/yoga1.jpg" alt="Yoga Restaurativo">
+              <div class="clase-overlay">
+                <h3>Yoga Restaurativo</h3>
+                <p>Enfocado en relajación y flexibilidad</p>
+                <span class="clase-horario">Lun/Vie 09:00hs</span>
+              </div>
+            </div>
+            <div class="clase-info">
+              <h3>Yoga Restaurativo</h3>
+              <p class="clase-desc">Mejora tu movilidad</p>
+            </div>
+          </article>
 
-<!-- Contenedor principal -->
-<div class="contenedor-principal">
-  <!-- Tarjetas -->
-  <article class="clase-card musculacion">
-    <div class="clase-img-container">
-      <img src="./images/clases/musculacion.jpg" alt="Musculación">
-      <div class="clase-overlay">
-        <h3>Musculación</h3>
-        <p>Desarrolla fuerza muscular</p>
+          <!-- Clase 4 -->
+          <article class="clase-card spinning">
+            <div class="clase-img-container">
+              <img src="./images/clases/spinning1.jpg" alt="Spinning Intenso">
+              <div class="clase-overlay">
+                <h3>Spinning Intenso</h3>
+                <p>Quema calorías con nuestra clase premium</p>
+                <span class="clase-horario">Mie/Sáb 08:00hs</span>
+              </div>
+            </div>
+            <div class="clase-info">
+              <h3>Spinning Intenso</h3>
+              <p class="clase-desc">Cardio de alto rendimiento</p>
+            </div>
+          </article>
+        </div>
       </div>
     </div>
-    <div class="clase-info">
-      <p><i class="fas fa-clock"></i> Lunes-Viernes 7:00-22:00</p>
-      <p><i class="fas fa-user-tie"></i> Prof. Carlos</p>
-    </div>
-  </article>
 
-  <article class="clase-card crossfit">
-    <div class="clase-img-container">
-      <img src="./images/clases/crossfit.jpg" alt="CrossFit">
-      <div class="clase-overlay">
-        <h3>CrossFit</h3>
-        <p>Alta intensidad</p>
-      </div>
-    </div>
-    <div class="clase-info">
-      <p><i class="fas fa-clock"></i> Lunes-Sábado 6:00-21:00</p>
-      <p><i class="fas fa-user-tie"></i> Prof. Ana</p>
-    </div>
-  </article>
-
-  <article class="clase-card yoga">
-    <div class="clase-img-container">
-      <img src="./images/clases/yoga.jpg" alt="Yoga">
-      <div class="clase-overlay">
-        <h3>Yoga</h3>
-        <p>Armoniza cuerpo y mente</p>
-      </div>
-    </div>
-    <div class="clase-info">
-      <p><i class="fas fa-clock"></i> Martes-Jueves 8:00-20:00</p>
-      <p><i class="fas fa-user-tie"></i> Prof. Sofía</p>
-    </div>
-  </article>
-
-  <article class="clase-card spinning">
-    <div class="clase-img-container">
-      <img src="./images/clases/spinning.jpg" alt="Spinning">
-      <div class="clase-overlay">
-        <h3>Spinning</h3>
-        <p>Cardio intensivo</p>
-      </div>
-    </div>
-    <div class="clase-info">
-      <p><i class="fas fa-clock"></i> Lunes-Viernes 6:00-22:00</p>
-      <p><i class="fas fa-user-tie"></i> Prof. Marcos</p>
-    </div>
-  </article>
-</div>
     <!-- Horarios -->
     <section class="horarios-section">
-        <h2>Horarios Semanales</h2>
-        <div class="tabla-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Hora</th>
-                        <th>Lunes</th>
-                        <th>Martes</th>
-                        <th>Miércoles</th>
-                        <th>Jueves</th>
-                        <th>Viernes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>07:00</td>
-                        <td class="musculacion">Musculación</td>
-                        <td class="yoga">Yoga</td>
-                        <td class="crossfit">CrossFit</td>
-                        <td class="yoga">Yoga</td>
-                        <td class="spinning">Spinning</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+      <h2>Horarios Semanales</h2>
+      <div class="tabla-container">
+        <table class="tabla-horarios">
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Lunes</th>
+              <th>Martes</th>
+              <th>Miércoles</th>
+              <th>Jueves</th>
+              <th>Viernes</th>
+              <th>Sábado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:00</td>
+              <td>Yoga</td>
+              <td>-</td>
+              <td>Spinning</td>
+              <td>-</td>
+              <td>Yoga</td>
+              <td>Spinning</td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+              <td>Musculación</td>
+              <td>CrossFit</td>
+              <td>Musculación</td>
+              <td>CrossFit</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>18:00</td>
+              <td>Musculación</td>
+              <td>-</td>
+              <td>Musculación</td>
+              <td>-</td>
+              <td>Yoga</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>19:30</td>
+              <td>-</td>
+              <td>CrossFit</td>
+              <td>-</td>
+              <td>CrossFit</td>
+              <td>Spinning</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+  </main>
 
     <footer>
         <div class="footer-top">

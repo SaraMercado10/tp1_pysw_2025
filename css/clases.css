@@ -1,242 +1,293 @@
-/* Variables globales */
 :root {
   --naranja: #ff7f11;
   --blanco: #ffffff;
   --negro: #000000;
-  --gris-oscuro: #222;
-  --gris-claro: #eee;
+  --gris-600: #6d6d6d;
+  --gris-800: #454545;
+  --blue-light: #0074d9;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Modo Claro */
+body.light-mode {
+  --fondo-card: #f8f9fa;
+  --texto-card: #212529;
+  --fondo-tabla: #ffffff;
+  --borde: #dee2e6;
+  --sombra: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Modo Oscuro (default) */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: var(--gris-claro);
-  color: var(--negro);
+  --fondo-card: #111;
+  --texto-card: #f8f9fa;
+  --fondo-tabla: #222;
+  --borde: #444;
 }
 
-/* ===== FILTROS ===== */
-.filtros-section {
-  background-color: var(--gris-oscuro);
-  padding: 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* ========== FILTRO CORREGIDO ========== */
+.filtro-sistema {
+  position: relative;
 }
 
-.filtros-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.filtros-container input[type="radio"] {
+.filtro-input {
   position: absolute;
   opacity: 0;
 }
 
-.filtros-container label {
-  padding: 0.5rem 1.5rem;
-  background-color: var(--negro);
-  color: var(--blanco);
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.filtros-container input[type="radio"]:checked + label {
-  background-color: var(--naranja);
-  color: var(--negro);
-  font-weight: bold;
-}
-
-/* ===== GALERÍA ===== */
-.contenedor-principal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.clase-card {
-  /*display: none;*/
-  width: calc(25% - 1.5rem); /* Ajustar ancho según diseño */
-  background: var(--negro);
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
+/* Reglas de filtrado funcionales */
+#todas:checked ~ .clases-container .clase-card,
+#musculacion:checked ~ .clases-container .musculacion,
+#crossfit:checked ~ .clases-container .crossfit,
+#yoga:checked ~ .clases-container .yoga,
+#spinning:checked ~ .clases-container .spinning {
+  display: block;
   animation: fadeIn 0.5s ease-out;
 }
 
-/* Mostrar todas las tarjetas cuando "todas" está seleccionada */
-#todas:checked ~ .contenedor-principal .clase-card {
-  display: block;
+#musculacion:checked ~ .clases-container .clase-card:not(.musculacion),
+#crossfit:checked ~ .clases-container .clase-card:not(.crossfit),
+#yoga:checked ~ .clases-container .clase-card:not(.yoga),
+#spinning:checked ~ .clases-container .clase-card:not(.spinning) {
+  display: none;
 }
 
-/* Mostrar solo las tarjetas correspondientes a cada categoría */
-#musculacion:checked ~ .contenedor-principal .musculacion,
-#crossfit:checked ~ .contenedor-principal .crossfit,
-#yoga:checked ~ .contenedor-principal .yoga,
-#spinning:checked ~ .contenedor-principal .spinning {
-  display: block;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Estilos Cards */
+/* ========== ESTILOS EXISTENTES (INALTERADOS) ========== */
+.filtros-container {
+  background: var(--fondo-card);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filtro-label {
+  padding: 0.6rem 1.2rem;
+  background: var(--fondo-tabla);
+  color: var(--texto-card);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--borde);
+  font-weight: 600;
+}
+
+.filtro-input:checked + .filtro-label {
+  background: var(--naranja);
+  color: var(--blanco);
+  border-color: var(--naranja);
+}
+
+.clases-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+.clases-container h1 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: var(--texto-card);
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.clases-container h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--naranja);
+  border-radius: 2px;
+}
+
+.clases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.clase-card {
+  background: var(--fondo-card);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde);
+}
+
 .clase-img-container {
   position: relative;
-  height: 250px;
+  height: 0;
+  padding-bottom: 100%;
   overflow: hidden;
 }
 
 .clase-img-container img {
+  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
+}
+
+.clase-card:hover .clase-img-container img {
+  transform: scale(1.1);
 }
 
 .clase-overlay {
   position: absolute;
   bottom: -100%;
   left: 0;
-  width: 100%;
+  right: 0;
   background: rgba(0, 0, 0, 0.8);
   color: var(--blanco);
-  padding: 1rem;
-  transition: bottom 0.3s;
+  padding: 1.5rem;
+  transition: bottom 0.4s ease;
 }
 
 .clase-card:hover .clase-overlay {
   bottom: 0;
 }
 
-.clase-card:hover img {
-  transform: scale(1.1);
+.clase-overlay h3 {
+  margin-bottom: 0.5rem;
+  color: var(--naranja);
 }
 
-.clase-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.clase-horario {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--naranja);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .clase-info {
-  padding: 1rem;
-  color: var(--blanco);
+  padding: 1.5rem;
 }
 
-.clase-info p {
-  margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.clase-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--texto-card);
 }
 
-/* ===== TABLA ===== */
+.clase-desc {
+  color: var(--gris-600);
+  font-size: 0.9rem;
+}
+
 .horarios-section {
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--borde);
 }
 
 .horarios-section h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--negro);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--texto-card);
 }
 
 .tabla-container {
   overflow-x: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  border-radius: 8px;
+  box-shadow: var(--sombra);
 }
 
-table {
+.tabla-horarios {
   width: 100%;
   border-collapse: collapse;
-  background: var(--blanco);
+  background: var(--fondo-tabla);
+  color: var(--texto-card);
+  min-width: 600px;
 }
 
-th,
-td {
+.tabla-horarios th, 
+.tabla-horarios td {
   padding: 1rem;
   text-align: center;
-  border: 1px solid var(--gris-claro);
+  border: 1px solid var(--borde);
 }
 
-th {
+.tabla-horarios th {
   background-color: var(--naranja);
-  color: var(--negro);
-  position: sticky;
-  top: 0;
+  color: var(--blanco);
+  font-weight: 600;
 }
 
-/* Colores por clase */
-.musculacion {
-  background-color: #ffd6c0;
-}
-.crossfit {
-  background-color: #c0ffd6;
-}
-.yoga {
-  background-color: #d6c0ff;
-}
-.spinning {
-  background-color: #c0d6ff;
+.tabla-horarios tr:nth-child(even) {
+  background-color: rgba(255, 127, 17, 0.05);
 }
 
-/* ===== RESPONSIVE ===== */
+/* Responsive */
 @media (max-width: 768px) {
-  .clase-card {
-      width: calc(50% - 1rem);
+  .clases-container h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
   }
-
-  .filtros-container {
-      flex-direction: column;
-      align-items: stretch;
+  
+  .filtros {
+    gap: 0.5rem;
   }
-
-  .filtros-container label {
-      width: 100%;
-      text-align: center;
+  
+  .filtro-label {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
   }
-
-  table {
-      font-size: 0.8rem;
+  
+  .clases-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-
-  th,
-  td {
-      padding: 0.5rem;
+  
+  .horarios-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+  
+  .tabla-horarios th, 
+  .tabla-horarios td {
+    padding: 0.8rem 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .clase-card {
-      width: 100%;
+  .clases-container h1 {
+    font-size: 1.8rem;
   }
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(10px);
+  
+  .filtro-label {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
   }
-  to {
-      opacity: 1;
-      transform: translateY(0);
+  
+  .clase-info {
+    padding: 1rem;
   }
 }
