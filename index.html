@@ -1,170 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gimnasio - Inicio</title>
-  <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="./css/footer.css" />
-  <link rel="stylesheet" href="./css/index.css" />
-</head>
-<body>
-  <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gimnasio - Inicio</title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Header con mega menú -->
+    <header class="header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-col logo">
+          <a href="#"><img src="./images/logo.png" alt="Logo" /></a>
+        </div>
 
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li><a href="formulario.html">Contacto</a></li>
-          <li><a href="precios.html">Precio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Botón de cambio de tema -->
-      <div class="nav-col theme-toggle">
-        <button id="theme-toggle" aria-label="Cambiar tema">
-          <i class="fas fa-sun"></i> <!-- Ícono para modo claro -->
-          <i class="fas fa-moon"></i> <!-- Ícono para modo oscuro -->
-        </button>
-      </div>
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <!-- Sección Hero -->
-  <section class="hero-section">
-    <div class="hero-text">
-      <h1>Entrená con nosotros</h1>
-      <p>Inspirate, superate y alcanzá tus metas en Activitar Gym.</p>
-    </div>
-    <div class="hero-video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/A5wqXRv0DIQ?si=veL6AKz_uKNvndJO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <!-- Clases destacadas -->
-  <section class="clases-destacadas">
-    <h2>Clases destacadas</h2>
-    <div class="clases-grid">
-      <div class="clase-card">
-        <img src="./images/gym/funcional.webp" alt="Funcional">
-        <h3>Funcional</h3>
-        <p>Mejorá tu resistencia, fuerza y coordinación en grupo.</p>
-      </div>
-      <div class="clase-card">
-        <img src="./images/gym/yoga.jpg" alt="Yoga">
-        <h3>Yoga</h3>
-        <p>Conectá mente y cuerpo con nuestras clases de yoga.</p>
-      </div>
-      <div class="clase-card">
-        <img src="./images/gym/boxeo.jpg" alt="Boxeo">
-        <h3>Boxeo</h3>
-        <p>Descargá energía mientras aprendés técnica y defensa.</p>
-      </div>
-    </div>
-  </section>
-  <!--Contador-->
-  <section class="contador-section">
-    <h2>
-      <span class="contador" data-count="500"></span>+ socios satisfechos
-    </h2>
-  </section>
-  <!-- Testimonios -->
-  <section class="testimonios-section">
-    <h2>Lo que dicen nuestros clientes</h2>
-    <div class="testimonios-carousel-wrapper">
-      <div class="testimonios-carousel">
-        <div class="testimonio">
-          <img src="./images/testimonios/hombre1.jpg" alt="Testimonio 1">
-          <p>Juan Pérez</p>
+        <div class="nav-col nav-links">
+          <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="clases.html" class="nav-item">Clases</a></li>
+            <li>
+              <a href="entrenadores.html" class="nav-item">Entrenadores</a>
+            </li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="precios.html">Precio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
         </div>
-        <div class="testimonio">
-          <img src="./images/testimonios/mujer1.jpg" alt="Testimonio 2">
-          <p>María García</p>
+        <!-- Botón de cambio de tema -->
+        <div class="nav-col theme-toggle">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun"></i>
+            <!-- Ícono para modo claro -->
+            <i class="fas fa-moon"></i>
+            <!-- Ícono para modo oscuro -->
+          </button>
         </div>
-        <div class="testimonio">
-          <img src="./images/testimonios/hombre2.jpg" alt="Testimonio 3">
-          <p>Carlos Rodríguez</p>
-        </div>
-        <div class="testimonio">
-          <img src="./images/testimonios/mujer2.jpg" alt="Testimonio 4">
-          <p>Ana Martínez</p>
-        </div>
-        <div class="testimonio">
-          <img src="./images/testimonios/mujer3.jpg" alt="Testimonio 5">
-          <p>Lucía Fernández</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Newsletter -->
-  <section class="newsletter-section">
-    <h2>Suscríbete a nuestro Newsletter</h2>
-    <form action="#" method="POST">
-      <input type="email" name="email" placeholder="Ingresa tu email" required />
-      <button type="submit">Suscribirse</button>
-    </form>
-  </section>
-  <!--Mapa-->
-  <div class="map-section">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0192532503344!2d-122.42067908468108!3d37.778519979758225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f87f31b%3A0xdbcbe4a08728f376!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615910929467!5m2!1sen!2sus"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>  
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
-        </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <div class="nav-col social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!-- Sección Hero -->
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1>Entrená con nosotros</h1>
+        <p>Inspirate, superate y alcanzá tus metas en Activitar Gym.</p>
+      </div>
+      <div class="hero-video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/A5wqXRv0DIQ?si=veL6AKz_uKNvndJO"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Clases destacadas -->
+    <section class="clases-destacadas">
+      <h2>Clases destacadas</h2>
+      <div class="clases-grid">
+        <div class="clase-card">
+          <img src="./images/gym/funcional.webp" alt="Funcional" />
+          <h3>Funcional</h3>
+          <p>Mejorá tu resistencia, fuerza y coordinación en grupo.</p>
+        </div>
+        <div class="clase-card">
+          <img src="./images/gym/yoga.jpg" alt="Yoga" />
+          <h3>Yoga</h3>
+          <p>Conectá mente y cuerpo con nuestras clases de yoga.</p>
+        </div>
+        <div class="clase-card">
+          <img src="./images/gym/boxeo.jpg" alt="Boxeo" />
+          <h3>Boxeo</h3>
+          <p>Descargá energía mientras aprendés técnica y defensa.</p>
         </div>
       </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
+    </section>
+    <!--Contador-->
+    <section class="contador-section">
+      <h2>
+        <span class="contador" data-count="500"></span>+ socios satisfechos
+      </h2>
+    </section>
+    <!-- Testimonios -->
+    <section class="testimonios-section">
+      <h2>Lo que dicen nuestros clientes</h2>
+      <div class="testimonios-carousel-wrapper">
+        <div class="testimonios-carousel">
+          <div class="testimonio">
+            <img src="./images/testimonios/hombre1.jpg" alt="Testimonio 1" />
+            <p>Juan Pérez</p>
+          </div>
+          <div class="testimonio">
+            <img src="./images/testimonios/mujer1.jpg" alt="Testimonio 2" />
+            <p>María García</p>
+          </div>
+          <div class="testimonio">
+            <img src="./images/testimonios/hombre2.jpg" alt="Testimonio 3" />
+            <p>Carlos Rodríguez</p>
+          </div>
+          <div class="testimonio">
+            <img src="./images/testimonios/mujer2.jpg" alt="Testimonio 4" />
+            <p>Ana Martínez</p>
+          </div>
+          <div class="testimonio">
+            <img src="./images/testimonios/mujer3.jpg" alt="Testimonio 5" />
+            <p>Lucía Fernández</p>
+          </div>
+        </div>
       </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
+    </section>
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+      <h2>Suscríbete a nuestro Newsletter</h2>
+      <form action="#" method="POST">
+        <input
+          type="email"
+          name="email"
+          placeholder="Ingresa tu email"
+          required
+        />
+        <button type="submit">Suscribirse</button>
+      </form>
+    </section>
+    <!--Mapa-->
+    <div class="map-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0192532503344!2d-122.42067908468108!3d37.778519979758225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5f87f31b%3A0xdbcbe4a08728f376!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1615910929467!5m2!1sen!2sus"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </div>
+    <footer>
+      <div class="footer-top">
+        <div class="footer-col left">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo del gimnasio" />
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col center">
+          <h4>Nuestro Producto</h4>
+          <ul>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col right">
+          <h4>Contáctanos</h4>
+          <p>Email: contacto@gimnasio.com</p>
+          <p>Dirección: Calle Ficticia 123, Ciudad</p>
+          <p>Tel: +54 9 11 1234 5678</p>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
-    </div>
-  </footer>  
-  <script src="./script/script.js"></script>
-</body>
+      <div class="footer-bottom">
+        <p>
+          Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado
+          por Sara Mercado.
+        </p>
+      </div>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
 </html>
-
-
-
-

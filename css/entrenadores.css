@@ -1,149 +1,149 @@
 /* Variables CSS */
 :root {
-    --naranja: #ff7f11;
-    --gris-800: #454545; /* Color base para el modo oscuro */
-    --gris-600: #6d6d6d; /* Color más claro para las tarjetas en modo oscuro */
-    --blanco: #ffffff;
-    --negro: #000000;
-    --blue-light: #0074d9;
-    --fondo-transparente: rgba(255, 255, 255, 0.05);
-  }
-  
-  /* Estilos generales */
-  .entrenadores-section {
-    background-color: var(--gris-800); /* Fondo oscuro para la sección */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .entrenadores-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .entrenador-card {
-    perspective: 1000px;
-    position: relative;
-    width: 100%;
-    height: 350px;
-  }
-  
-  .card-front,
-  .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.6s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* Modo oscuro */
-  .card-front {
-    background-color: var(--gris-600); /* Fondo gris medio para el frente */
-    color: white;
-  }
-  
-  .card-back {
-    background-color: var(--gris-600); /* Fondo gris medio para el reverso */
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
-  /* Modo claro */
-  body.light-mode .entrenadores-section {
-    background-color: var(--blanco); /* Fondo blanco para la sección */
-    color: var(--negro);
-  }
-  
-  body.light-mode .card-front {
-    background-color: var(--blue-light); /* Fondo azul para el frente */
-    color: white;
-  }
-  
-  body.light-mode .card-back {
-    background-color: var(--blue-light); /* Fondo azul para el reverso */
-    color: white;
-  }
-  
-  /* Efecto flip */
-  .entrenador-card:hover .card-front {
-    transform: rotateY(-180deg);
-  }
-  
-  .entrenador-card:hover .card-back {
-    transform: rotateY(0deg);
-  }
-  
-  /* Resto de los estilos (imágenes, habilidades, rating) */
-  .card-front img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
-  }
-  
-  .card-front h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .card-front p {
-    font-size: 1rem;
-    color: #ccc;
-  }
-  
-  /* Barras de habilidades */
-  .skill {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  
-  .skill span {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .skill-bar {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    height: 10px;
-  }
-  
-  .skill-level {
-    height: 100%;
-    background-color: var(--naranja);
-    transition: width 1s ease;
-  }
-  
-  /* Rating con estrellas */
-  .rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  
-  .stars i {
-    color: #ccc;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .stars i.fas {
-    color: var(--naranja);
-  }
+  --naranja: #ff7f11;
+  --gris-800: #454545; /* Color base para el modo oscuro */
+  --gris-600: #6d6d6d; /* Color más claro para las tarjetas en modo oscuro */
+  --blanco: #ffffff;
+  --negro: #000000;
+  --blue-light: #0074d9;
+  --fondo-transparente: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos generales */
+.entrenadores-section {
+  background-color: var(--gris-800); /* Fondo oscuro para la sección */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.entrenadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.entrenador-card {
+  perspective: 1000px;
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Modo oscuro */
+.card-front {
+  background-color: var(--gris-600); /* Fondo gris medio para el frente */
+  color: white;
+}
+
+.card-back {
+  background-color: var(--gris-600); /* Fondo gris medio para el reverso */
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Modo claro */
+body.light-mode .entrenadores-section {
+  background-color: var(--blanco); /* Fondo blanco para la sección */
+  color: var(--negro);
+}
+
+body.light-mode .card-front {
+  background-color: var(--blue-light); /* Fondo azul para el frente */
+  color: white;
+}
+
+body.light-mode .card-back {
+  background-color: var(--blue-light); /* Fondo azul para el reverso */
+  color: white;
+}
+
+/* Efecto flip */
+.entrenador-card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+
+.entrenador-card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+/* Resto de los estilos (imágenes, habilidades, rating) */
+.card-front img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.card-front h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-front p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Barras de habilidades */
+.skill {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.skill-bar {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: var(--naranja);
+  transition: width 1s ease;
+}
+
+/* Rating con estrellas */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.stars i {
+  color: #ccc;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.stars i.fas {
+  color: var(--naranja);
+}

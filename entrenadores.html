@@ -1,350 +1,380 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gimnasio - Entrenador</title>
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/entrenadores.css" />
-</head>
-<body>
-   <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
+  </head>
+  <body>
+    <!-- Header con mega menú -->
+    <header class="header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-col logo">
+          <a href="#"><img src="./images/logo.png" alt="Logo" /></a>
+        </div>
 
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li><a href="formulario.html">Contacto</a></li>
-          <li><a href="precios.html">Precio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Botón de cambio de tema -->
-      <div class="nav-col theme-toggle">
-        <button id="theme-toggle" aria-label="Cambiar tema">
-          <i class="fas fa-sun"></i> <!-- Ícono para modo claro -->
-          <i class="fas fa-moon"></i> <!-- Ícono para modo oscuro -->
-        </button>
-      </div>
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <!-- Sección de Entrenadores -->
-  <section class="entrenadores-section">
-    <h2>Nuestros Entrenadores</h2>
-    <br>
-    <div class="entrenadores-grid">
-      <!-- Tarjeta de Entrenador 1 -->
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
+        <div class="nav-col nav-links">
+          <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="clases.html" class="nav-item">Clases</a></li>
+            <li>
+              <a href="entrenadores.html" class="nav-item">Entrenadores</a>
+            </li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="precios.html">Precio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
         </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
+        <!-- Botón de cambio de tema -->
+        <div class="nav-col theme-toggle">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun"></i>
+            <!-- Ícono para modo claro -->
+            <i class="fas fa-moon"></i>
+            <!-- Ícono para modo oscuro -->
+          </button>
         </div>
-      </div>
-
-      <!-- Tarjeta de Entrenador 2 -->
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/ana.jpg" alt="Entrenador 2">
-          <h3>María García</h3>
-          <p>Especialista en Yoga</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 40%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 95%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/sofia.jpg" alt="Entrenador 2">
-          <h3>Sofía Valdiviezo</h3>
-          <p>Especialista en Yoga</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 60%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 70%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="entrenador-card">
-        <div class="card-front">
-          <img src="./images/entrenadores/entrenador.jpg" alt="Entrenador 1">
-          <h3>Juan Pérez</h3>
-          <p>Especialista en Fuerza</p>
-        </div>
-        <div class="card-back">
-          <h3>Habilidades</h3>
-          <div class="skill">
-            <span>Fuerza</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 90%;"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Flexibilidad</span>
-            <div class="skill-bar">
-              <div class="skill-level" style="width: 75%;"></div>
-            </div>
-          </div>
-          <div class="rating">
-            <span>Rating:</span>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
-        </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <div class="nav-col social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!-- Sección de Entrenadores -->
+    <section class="entrenadores-section">
+      <h2>Nuestros Entrenadores</h2>
+      <br />
+      <div class="entrenadores-grid">
+        <!-- Tarjeta de Entrenador 1 -->
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Entrenador 2 -->
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img src="./images/entrenadores/ana.jpg" alt="Entrenador 2" />
+            <h3>María García</h3>
+            <p>Especialista en Yoga</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 40%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img src="./images/entrenadores/sofia.jpg" alt="Entrenador 2" />
+            <h3>Sofía Valdiviezo</h3>
+            <p>Especialista en Yoga</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entrenador-card">
+          <div class="card-front">
+            <img
+              src="./images/entrenadores/entrenador.jpg"
+              alt="Entrenador 1"
+            />
+            <h3>Juan Pérez</h3>
+            <p>Especialista en Fuerza</p>
+          </div>
+          <div class="card-back">
+            <h3>Habilidades</h3>
+            <div class="skill">
+              <span>Fuerza</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Flexibilidad</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="rating">
+              <span>Rating:</span>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
+    </section>
+    <footer>
+      <div class="footer-top">
+        <div class="footer-col left">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo del gimnasio" />
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col center">
+          <h4>Nuestro Producto</h4>
+          <ul>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col right">
+          <h4>Contáctanos</h4>
+          <p>Email: contacto@gimnasio.com</p>
+          <p>Dirección: Calle Ficticia 123, Ciudad</p>
+          <p>Tel: +54 9 11 1234 5678</p>
+        </div>
       </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
+      <div class="footer-bottom">
+        <p>
+          Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado
+          por Sara Mercado.
+        </p>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
-    </div>
-  </footer>  
-  <script src="./script/script.js"></script>
-</body>
+    </footer>
+    <script src="./script/script.js"></script>
+  </body>
 </html>

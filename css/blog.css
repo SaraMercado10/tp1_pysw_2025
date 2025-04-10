@@ -49,7 +49,7 @@ body {
   box-shadow: var(--sombra);
 }
 
-body.light-mode .filtros-container{
+body.light-mode .filtros-container {
   background-color: #40dbff;
 }
 
@@ -124,11 +124,12 @@ body.light-mode .filtros-container{
   border: 1px solid var(--borde);
 }
 
-body.light-mode .blog-grid .blog-card .blog-content h2, body.light-mode .blog-grid .blog-card .blog-content .blog-meta{
+body.light-mode .blog-grid .blog-card .blog-content h2,
+body.light-mode .blog-grid .blog-card .blog-content .blog-meta {
   color: var(--blanco);
 }
 
-body.light-mode .blog-card{
+body.light-mode .blog-card {
   background-color: #40dbff;
 }
 
@@ -208,7 +209,7 @@ body.light-mode .blog-card{
   font-size: 2rem;
 }
 
-body.light-mode .comentarios-titulo{
+body.light-mode .comentarios-titulo {
   color: blue;
 }
 
@@ -227,7 +228,7 @@ body.light-mode .comentarios-titulo{
   box-shadow: var(--sombra);
 }
 
-body.light-mode .comentario-card{
+body.light-mode .comentario-card {
   background-color: #40dbff;
 }
 
@@ -280,8 +281,14 @@ body.light-mode .comentario-card{
 
 /* === ANIMACIONES === */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === RESPONSIVE === */
@@ -289,7 +296,7 @@ body.light-mode .comentario-card{
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .blog-card.destacado {
     grid-column: span 2;
   }
@@ -299,20 +306,20 @@ body.light-mode .comentario-card{
   .blog-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .blog-card.destacado {
     grid-column: span 1;
   }
-  
+
   .filtro-label {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
-  
+
   .comentario-card {
     flex-direction: column;
   }
-  
+
   .comentario-avatar {
     align-self: center;
   }
@@ -322,11 +329,11 @@ body.light-mode .comentario-card{
   .blog-content {
     padding: 1rem;
   }
-  
+
   .blog-card h2 {
     font-size: 1.3rem;
   }
-  
+
   .comentarios-titulo {
     font-size: 1.5rem;
   }

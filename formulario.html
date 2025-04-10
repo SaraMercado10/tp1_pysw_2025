@@ -1,123 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gimnasio - Contacto</title>
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/formulario.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
+    <header class="header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-col logo">
+          <a href="#"><img src="./images/logo.png" alt="Logo" /></a>
+        </div>
 
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li><a href="formulario.html">Contacto</a></li>
-          <li><a href="precios.html">Precio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Botón de cambio de tema -->
-      <div class="nav-col theme-toggle">
-        <button id="theme-toggle" aria-label="Cambiar tema">
-          <i class="fas fa-sun"></i> <!-- Ícono para modo claro -->
-          <i class="fas fa-moon"></i> <!-- Ícono para modo oscuro -->
-        </button>
-      </div>
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <!-- Sección de Formulario -->
-  <section class="contact-section">
-    <h2>Contáctanos</h2>
-    <form id="contact-form" class="contact-form">
+        <div class="nav-col nav-links">
+          <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="clases.html" class="nav-item">Clases</a></li>
+            <li>
+              <a href="entrenadores.html" class="nav-item">Entrenadores</a>
+            </li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="precios.html">Precio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <!-- Botón de cambio de tema -->
+        <div class="nav-col theme-toggle">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun"></i>
+            <!-- Ícono para modo claro -->
+            <i class="fas fa-moon"></i>
+            <!-- Ícono para modo oscuro -->
+          </button>
+        </div>
+        <div class="nav-col social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!-- Sección de Formulario -->
+    <section class="contact-section">
+      <h2>Contáctanos</h2>
+      <form id="contact-form" class="contact-form">
         <div class="form-group">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          <label for="nombre">Nombre completo:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+          />
         </div>
 
         <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+            required
+          />
         </div>
 
         <div class="form-group">
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          <label for="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escribe tu mensaje aquí..."
+            required
+          ></textarea>
         </div>
 
         <button type="submit" id="submit-btn">
-            Enviar <i class="fas fa-paper-plane"></i>
+          Enviar <i class="fas fa-paper-plane"></i>
         </button>
 
         <!-- Spinner de carga -->
         <div class="spinner-container" id="spinner-container">
-            <div class="spinner"></div>
+          <div class="spinner"></div>
         </div>
-    </form>
+      </form>
 
-    <!-- Modal de confirmación -->
-    <div class="modal" id="confirmation-modal">
+      <!-- Modal de confirmación -->
+      <div class="modal" id="confirmation-modal">
         <div class="modal-content">
-            <h3>Mensaje enviado</h3>
-            <p>Tu mensaje ha sido enviado correctamente. ¡Nos pondremos en contacto pronto!</p>
-            <button id="close-modal">Cerrar</button>
-        </div>
-    </div>
-</section>
-  <footer>
-    <div class="footer-top">
-      <div class="footer-col left">
-        <div class="footer-logo">
-          <img src="./images/logo.png" alt="Logo del gimnasio">
-        </div>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+          <h3>Mensaje enviado</h3>
+          <p>
+            Tu mensaje ha sido enviado correctamente. ¡Nos pondremos en contacto
+            pronto!
+          </p>
+          <button id="close-modal">Cerrar</button>
         </div>
       </div>
-      <div class="footer-col center">
-        <h4>Nuestro Producto</h4>
-        <ul>
-          <li><a href="#">Planes</a></li>
-          <li><a href="#">Clases</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
+    </section>
+    <footer>
+      <div class="footer-top">
+        <div class="footer-col left">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo del gimnasio" />
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col center">
+          <h4>Nuestro Producto</h4>
+          <ul>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col right">
+          <h4>Contáctanos</h4>
+          <p>Email: contacto@gimnasio.com</p>
+          <p>Dirección: Calle Ficticia 123, Ciudad</p>
+          <p>Tel: +54 9 11 1234 5678</p>
+        </div>
       </div>
-      <div class="footer-col right">
-        <h4>Contáctanos</h4>
-        <p>Email: contacto@gimnasio.com</p>
-        <p>Dirección: Calle Ficticia 123, Ciudad</p>
-        <p>Tel: +54 9 11 1234 5678</p>
+      <div class="footer-bottom">
+        <p>
+          Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado
+          por Sara Mercado.
+        </p>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
-    </div>
-  </footer>  
-  <script src="./script/script.js"></script>
-  <script src="./script/formuario.js"></script>
-</body>
+    </footer>
+    <script src="./script/script.js"></script>
+    <script src="./script/formuario.js"></script>
+  </body>
 </html>

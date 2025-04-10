@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .header {
@@ -132,37 +132,37 @@ body {
 
 @media (max-width: 768px) {
   .nav-toggle {
-      display: flex;
-      position: absolute;
-      right: 2rem;
-      top: 1.5rem;
+    display: flex;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
   }
 
   .navbar {
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
   }
 
   .logo,
   .social-icons {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
 
   .nav-links {
-      display: none;
-      width: 100%;
+    display: none;
+    width: 100%;
   }
 
   .nav-links ul {
-      flex-direction: column;
-      gap: 1rem;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .navbar.active .nav-links {
-      display: flex;
+    display: flex;
   }
 }
 

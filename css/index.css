@@ -48,46 +48,46 @@
 
 @keyframes slideInDown {
   from {
-      opacity: 0;
-      transform: translateY(-40px);
+    opacity: 0;
+    transform: translateY(-40px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes fadeInText {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes fadeSlideIn {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @media (max-width: 768px) {
   .hero-text h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .hero-text p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .hero-video-container iframe {
-      height: 250px;
+    height: 250px;
   }
 }
 
@@ -165,8 +165,12 @@
 }
 
 @keyframes contar {
-  from { --numero: 0; }
-  to { --numero: 500; }
+  from {
+    --numero: 0;
+  }
+  to {
+    --numero: 500;
+  }
 }
 
 .testimonios-section {
@@ -208,15 +212,33 @@
 }
 
 @keyframes carousel {
-  0% { transform: translateX(0); }
-  20% { transform: translateX(0); }
-  25% { transform: translateX(-20%); }
-  45% { transform: translateX(-20%); }
-  50% { transform: translateX(-40%); }
-  70% { transform: translateX(-40%); }
-  75% { transform: translateX(-60%); }
-  95% { transform: translateX(-60%); }
-  100% { transform: translateX(-80%); }
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20%);
+  }
+  45% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  70% {
+    transform: translateX(-40%);
+  }
+  75% {
+    transform: translateX(-60%);
+  }
+  95% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
 }
 
 .newsletter-section {
@@ -282,7 +304,7 @@ body.light-mode .clases-destacadas,
 body.light-mode .contador-section,
 body.light-mode .testimonios-section {
   background-color: var(--blanco);
-  color: blue
+  color: blue;
 }
 
 body.light-mode .newsletter-section {

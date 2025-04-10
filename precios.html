@@ -1,165 +1,213 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gimnasio - Precio</title>
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="./css/precios.css" />
     <style>
-        /* Estilos adicionales para el toggle */
-        .annual-price { display: none; }
-        .monthly-price { display: block; }
-        
-        #plan-toggle:checked ~ .toggle-label .monthly-text { display: none; }
-        #plan-toggle:checked ~ .toggle-label .annual-text { display: inline; }
-        
-        #plan-toggle:checked ~ .precios-container .monthly-price { display: none; }
-        #plan-toggle:checked ~ .precios-container .annual-price { display: block; }
+      /* Estilos adicionales para el toggle */
+      .annual-price {
+        display: none;
+      }
+      .monthly-price {
+        display: block;
+      }
+
+      #plan-toggle:checked ~ .toggle-label .monthly-text {
+        display: none;
+      }
+      #plan-toggle:checked ~ .toggle-label .annual-text {
+        display: inline;
+      }
+
+      #plan-toggle:checked ~ .precios-container .monthly-price {
+        display: none;
+      }
+      #plan-toggle:checked ~ .precios-container .annual-price {
+        display: block;
+      }
     </style>
-</head>
-<body>
-   <!-- Header con mega menú -->
-  <header class="header">
-    <nav class="navbar" id="navbar">
-      <div class="nav-col logo">
-        <a href="#"><img src="./images/logo.png" alt="Logo"></a>
-      </div>
-
-      <div class="nav-toggle" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="nav-col nav-links">
-        <ul>
-          <li><a href="index.html" class="nav-item">Inicio</a></li>
-          <li><a href="clases.html" class="nav-item">Clases</a></li>
-          <li><a href="entrenadores.html" class="nav-item">Entrenadores</a></li>
-          <li><a href="formulario.html">Contacto</a></li>
-          <li><a href="precios.html">Precio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <!-- Botón de cambio de tema -->
-      <div class="nav-col theme-toggle">
-        <button id="theme-toggle" aria-label="Cambiar tema">
-          <i class="fas fa-sun"></i> <!-- Ícono para modo claro -->
-          <i class="fas fa-moon"></i> <!-- Ícono para modo oscuro -->
-        </button>
-      </div>
-      <div class="nav-col social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </nav>
-  </header>
-  <!-- Sección Precios -->
-  <section class="seccion-precios">
-    <h2>Nuestros Planes</h2>
-    <p>Elige el que más te guste</p>
-
-    <!-- Toggle Mensual/Anual -->
-    <input type="checkbox" id="toggle-plan" name="toggle-plan">
-    <div class="contenedor-precios">
-        <div class="toggle-container">
-            <label for="toggle-plan" class="toggle-label">
-                <span>Mensual</span>
-                <span class="toggle-switch"></span>
-                <span>Anual</span>
-            </label>
+  </head>
+  <body>
+    <!-- Header con mega menú -->
+    <header class="header">
+      <nav class="navbar" id="navbar">
+        <div class="nav-col logo">
+          <a href="#"><img src="./images/logo.png" alt="Logo" /></a>
         </div>
-    </div>
 
-    <!-- Tabla de Precios -->
-    <div class="tabla-precios">
+        <div class="nav-toggle" id="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="nav-col nav-links">
+          <ul>
+            <li><a href="index.html" class="nav-item">Inicio</a></li>
+            <li><a href="clases.html" class="nav-item">Clases</a></li>
+            <li>
+              <a href="entrenadores.html" class="nav-item">Entrenadores</a>
+            </li>
+            <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="precios.html">Precio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <!-- Botón de cambio de tema -->
+        <div class="nav-col theme-toggle">
+          <button id="theme-toggle" aria-label="Cambiar tema">
+            <i class="fas fa-sun"></i>
+            <!-- Ícono para modo claro -->
+            <i class="fas fa-moon"></i>
+            <!-- Ícono para modo oscuro -->
+          </button>
+        </div>
+        <div class="nav-col social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </nav>
+    </header>
+    <!-- Sección Precios -->
+    <section class="seccion-precios">
+      <h2>Nuestros Planes</h2>
+      <p>Elige el que más te guste</p>
+
+      <!-- Toggle Mensual/Anual -->
+      <input type="checkbox" id="toggle-plan" name="toggle-plan" />
+      <div class="contenedor-precios">
+        <div class="toggle-container">
+          <label for="toggle-plan" class="toggle-label">
+            <span>Mensual</span>
+            <span class="toggle-switch"></span>
+            <span>Anual</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Tabla de Precios -->
+      <div class="tabla-precios">
         <div class="plan">
-            <h3>Básico</h3>
-            <div class="precio">
-                <span class="mensual">$25</span>
-                <span class="anual">$250</span>
-                <span class="periodo mensual">/mes</span>
-                <span class="periodo anual">/año</span>
-            </div>
-            <ul>
-                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
-                <li data-tooltip="Clases básicas incluidas">1 Clase Grupal<span class="tooltip">Yoga o Pilates</span></li>
-                <li class="no-incluido">Entrenador Personal</li>
-                <li class="no-incluido">Nutricionista</li>
-            </ul>
-            <button class="btn-suscribir">Suscribirse</button>
+          <h3>Básico</h3>
+          <div class="precio">
+            <span class="mensual">$25</span>
+            <span class="anual">$250</span>
+            <span class="periodo mensual">/mes</span>
+            <span class="periodo anual">/año</span>
+          </div>
+          <ul>
+            <li data-tooltip="Acceso completo a máquinas y pesas">
+              Acceso al Gimnasio<span class="tooltip"
+                >Incluye acceso ilimitado</span
+              >
+            </li>
+            <li data-tooltip="Clases básicas incluidas">
+              1 Clase Grupal<span class="tooltip">Yoga o Pilates</span>
+            </li>
+            <li class="no-incluido">Entrenador Personal</li>
+            <li class="no-incluido">Nutricionista</li>
+          </ul>
+          <button class="btn-suscribir">Suscribirse</button>
         </div>
         <div class="plan destacado">
-            <h3>Pro</h3>
-            <div class="precio">
-                <span class="mensual">$45</span>
-                <span class="anual">$450</span>
-                <span class="periodo mensual">/mes</span>
-                <span class="periodo anual">/año</span>
-            </div>
-            <ul>
-                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
-                <li data-tooltip="Todas las clases grupales incluidas">Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span></li>
-                <li data-tooltip="1 sesión mensual con entrenador">Entrenador Personal<span class="tooltip">1 vez al mes</span></li>
-                <li class="no-incluido">Nutricionista</li>
-            </ul>
-            <button class="btn-suscribir">Suscribirse</button>
+          <h3>Pro</h3>
+          <div class="precio">
+            <span class="mensual">$45</span>
+            <span class="anual">$450</span>
+            <span class="periodo mensual">/mes</span>
+            <span class="periodo anual">/año</span>
+          </div>
+          <ul>
+            <li data-tooltip="Acceso completo a máquinas y pesas">
+              Acceso al Gimnasio<span class="tooltip"
+                >Incluye acceso ilimitado</span
+              >
+            </li>
+            <li data-tooltip="Todas las clases grupales incluidas">
+              Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span>
+            </li>
+            <li data-tooltip="1 sesión mensual con entrenador">
+              Entrenador Personal<span class="tooltip">1 vez al mes</span>
+            </li>
+            <li class="no-incluido">Nutricionista</li>
+          </ul>
+          <button class="btn-suscribir">Suscribirse</button>
         </div>
         <div class="plan">
-            <h3>Élite</h3>
-            <div class="precio">
-                <span class="mensual">$65</span>
-                <span class="anual">$650</span>
-                <span class="periodo mensual">/mes</span>
-                <span class="periodo anual">/año</span>
-            </div>
-            <ul>
-                <li data-tooltip="Acceso completo a máquinas y pesas">Acceso al Gimnasio<span class="tooltip">Incluye acceso ilimitado</span></li>
-                <li data-tooltip="Todas las clases grupales incluidas">Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span></li>
-                <li data-tooltip="Sesiones semanales con entrenador">Entrenador Personal<span class="tooltip">1 vez por semana</span></li>
-                <li data-tooltip="Plan personalizado incluido">Nutricionista<span class="tooltip">Consulta mensual</span></li>
-            </ul>
-            <button class="btn-suscribir">Suscribirse</button>
+          <h3>Élite</h3>
+          <div class="precio">
+            <span class="mensual">$65</span>
+            <span class="anual">$650</span>
+            <span class="periodo mensual">/mes</span>
+            <span class="periodo anual">/año</span>
+          </div>
+          <ul>
+            <li data-tooltip="Acceso completo a máquinas y pesas">
+              Acceso al Gimnasio<span class="tooltip"
+                >Incluye acceso ilimitado</span
+              >
+            </li>
+            <li data-tooltip="Todas las clases grupales incluidas">
+              Clases Grupales<span class="tooltip">CrossFit, Yoga, etc.</span>
+            </li>
+            <li data-tooltip="Sesiones semanales con entrenador">
+              Entrenador Personal<span class="tooltip">1 vez por semana</span>
+            </li>
+            <li data-tooltip="Plan personalizado incluido">
+              Nutricionista<span class="tooltip">Consulta mensual</span>
+            </li>
+          </ul>
+          <button class="btn-suscribir">Suscribirse</button>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
     <footer>
-        <div class="footer-top">
-            <div class="footer-col left">
-                <div class="footer-logo">
-                    <img src="./images/logo.png" alt="Logo del gimnasio">
-                </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-col center">
-                <h4>Nuestro Producto</h4>
-                <ul>
-                    <li><a href="#">Planes</a></li>
-                    <li><a href="#">Clases</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col right">
-                <h4>Contáctanos</h4>
-                <p>Email: contacto@gimnasio.com</p>
-                <p>Dirección: Calle Ficticia 123, Ciudad</p>
-                <p>Tel: +54 9 11 1234 5678</p>
-            </div>
+      <div class="footer-top">
+        <div class="footer-col left">
+          <div class="footer-logo">
+            <img src="./images/logo.png" alt="Logo del gimnasio" />
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado por Sara Mercado.</p>
+        <div class="footer-col center">
+          <h4>Nuestro Producto</h4>
+          <ul>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Clases</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
         </div>
+        <div class="footer-col right">
+          <h4>Contáctanos</h4>
+          <p>Email: contacto@gimnasio.com</p>
+          <p>Dirección: Calle Ficticia 123, Ciudad</p>
+          <p>Tel: +54 9 11 1234 5678</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          Colorlib, Activitar - Copyright ©2025 All rights reserved | Modificado
+          por Sara Mercado.
+        </p>
+      </div>
     </footer>
     <script src="./script/script.js"></script>
-</body>
+  </body>
 </html>
